@@ -7,6 +7,24 @@
         mc:Ignorable="d"
         Title="RecordWindow" Height="450" Width="800">
     <Grid>
-        
+        <StackPanel>
+            <TextBlock
+                Text="Запись"
+                FontSize="25"
+                TextAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="10"
+                />
+            <Button
+                x:Name="Exit"
+                Height="70"
+                Width="200"
+                Margin="250"
+                Content="Выйти"
+                FontSize="35" 
+                Click="Exit_Click"
+                />
+
+        </StackPanel>
     </Grid>
 </Window>

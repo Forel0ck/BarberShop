@@ -20,35 +20,42 @@
                 Content="Католог услуг"
                 FontSize="25"
                 Height="50"
-                Margin="10" Click="Services_Click"
+                Margin="5" Click="Services_Click"
                 />
             <Button
                 x:Name="Record"
                 Content="Запись на услуг"
                 FontSize="25"
                 Height="50"
-                Margin="10" Click="Record_Click"
+                Margin="5" Click="Record_Click"
                 />
             <Button
                 x:Name="Personal"
                 Content="Персонал"
                 FontSize="25"
                 Height="50"
-                Margin="10" Click="Personal_Click"
+                Margin="5" Click="Personal_Click"
                 />
             <Button
                 x:Name="Stuff"
                 Content="Расходники"
                 FontSize="25"
                 Height="50"
-                Margin="10" Click="Stuff_Click"
+                Margin="5" Click="Stuff_Click"
                 />
             <Button
                 x:Name="Report"
                 Content="Отчет"
                 FontSize="25"
                 Height="50"
-                Margin="10" Click="Report_Click"
+                Margin="5" Click="Report_Click"
+                />
+            <Button
+                x:Name="Exit"
+                Content="Выйти из системы"
+                FontSize="25"
+                Height="50"
+                Margin="5" Click="Exit_Click" 
                 />
         </StackPanel>
 

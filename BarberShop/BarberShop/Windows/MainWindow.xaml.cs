@@ -59,8 +59,16 @@ namespace BarberShop.Windows
         private void Report_Click(object sender, RoutedEventArgs e)
         {
             this.Hide();
-            RecordWindow recordWindow = new RecordWindow();
-            recordWindow.ShowDialog();
+            ReportWindow reportWindow = new ReportWindow();
+            reportWindow.ShowDialog();
+            this.Close();
+        }
+
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            AuthWindow authWindow = new AuthWindow();
+            authWindow.ShowDialog();
             this.Close();
         }
     }
