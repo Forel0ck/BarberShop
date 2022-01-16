@@ -5,57 +5,73 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BarberShop.Windows"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        WindowStyle="None"
+        WindowState="Maximized"
+        Title="MainWindow" Height="1080" Width="1920">
     <Grid>
         <StackPanel>
+            <Button
+                x:Name="Close"
+                Height="50"
+                Width="50"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Right"
+                Margin="20" Click="Close_Click" 
+                BorderBrush="{x:Null}" 
+                Foreground="{x:Null}"  
+                >
+                <Button.Background>
+                    <ImageBrush ImageSource="/Images/cross.png"/>
+                </Button.Background>
+            </Button>
             <TextBlock
                 Text="Барбер Шоп"
-                FontSize="30"
-                Height="50"
+                FontSize="70"
+                Height="150"
                 TextAlignment="Center"
                 VerticalAlignment="Center"
                 />
             <Button
                 x:Name="Services"
                 Content="Католог услуг"
-                FontSize="25"
-                Height="50"
-                Margin="5" Click="Services_Click"
+                FontSize="50"
+                Height="100"
+                Margin="20" Click="Services_Click"
                 />
             <Button
                 x:Name="Record"
                 Content="Запись на услуг"
-                FontSize="25"
-                Height="50"
-                Margin="5" Click="Record_Click"
+                FontSize="50"
+                Height="100"
+                Margin="20" Click="Record_Click"
                 />
             <Button
                 x:Name="Personal"
                 Content="Персонал"
-                FontSize="25"
-                Height="50"
-                Margin="5" Click="Personal_Click"
+                FontSize="50"
+                Height="100"
+                Margin="20" Click="Personal_Click"
                 />
             <Button
                 x:Name="Stuff"
                 Content="Расходники"
-                FontSize="25"
-                Height="50"
-                Margin="5" Click="Stuff_Click"
+                FontSize="50"
+                Height="100"
+                Margin="20" Click="Stuff_Click"
                 />
             <Button
                 x:Name="Report"
                 Content="Отчет"
-                FontSize="25"
-                Height="50"
-                Margin="5" Click="Report_Click"
+                FontSize="50"
+                Height="100"
+                Margin="20" Click="Report_Click"
                 />
             <Button
                 x:Name="Exit"
                 Content="Выйти из системы"
-                FontSize="25"
-                Height="50"
-                Margin="5" Click="Exit_Click" 
+                FontSize="50"
+                Height="100"
+                Margin="20" Click="Exit_Click" 
                 />
         </StackPanel>
 

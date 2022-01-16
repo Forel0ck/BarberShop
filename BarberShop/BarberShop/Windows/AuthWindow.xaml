@@ -5,10 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BarberShop.Windows"
         mc:Ignorable="d"
+        WindowStyle="None"
         WindowStartupLocation="CenterScreen"
         Title="AuthWindow" Height="550" Width="400">
     <Grid>
         <StackPanel>
+            <Button
+                x:Name="Close"
+                Height="30"
+                Width="30"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Right"
+                Margin="20" Click="Close_Click" 
+                BorderBrush="{x:Null}" 
+                Foreground="{x:Null}"  
+                >
+                <Button.Background>
+                    <ImageBrush ImageSource="/Images/cross.png"/>
+                </Button.Background>
+            </Button>
             <TextBlock
                 Text="Авторизация"
                 Height="50"

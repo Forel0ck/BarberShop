@@ -71,5 +71,10 @@ namespace BarberShop.Windows
             authWindow.ShowDialog();
             this.Close();
         }
+
+        private void Close_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

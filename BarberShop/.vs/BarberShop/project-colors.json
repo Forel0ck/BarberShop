@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "0b09db6e-29a9-43cd-ba5b-802f30d0cba6": {
+      "ProjectGuid": "0b09db6e-29a9-43cd-ba5b-802f30d0cba6",
+      "DisplayName": "BarberShop",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

@@ -137,7 +137,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="EF\" />
-    <Folder Include="Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\cross.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

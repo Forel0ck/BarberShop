@@ -5,23 +5,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BarberShop.Windows"
         mc:Ignorable="d"
-        Title="ServicesWindow" Height="450" Width="800">
+        WindowStyle="None"
+        WindowState="Maximized"
+        Title="ServicesWindow" Height="1080" Width="1920">
     <Grid>
         <StackPanel>
+            <Button
+                x:Name="Close"
+                Height="50"
+                Width="50"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Right"
+                Margin="20" Click="Close_Click" 
+                BorderBrush="{x:Null}" 
+                Foreground="{x:Null}"  
+                >
+                <Button.Background>
+                    <ImageBrush ImageSource="/Images/cross.png"/>
+                </Button.Background>
+            </Button>
             <TextBlock
                 Text="Услуги"
-                FontSize="25"
+                FontSize="70"
                 TextAlignment="Center"
                 VerticalAlignment="Center"
                 Margin="10"
                 />
             <Button
-                x:Name="Exit"
-                Height="70"
-                Width="200"
-                Margin="250"
+                x:Name="Exit" 
                 Content="Выйти"
                 FontSize="35" 
+                Height="70"
+                Width="200"
+                Margin="50"
+                VerticalAlignment="Top"
                 Click="Exit_Click"
                 />
 
