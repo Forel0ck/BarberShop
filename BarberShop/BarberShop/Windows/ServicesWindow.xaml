@@ -9,39 +9,66 @@
         WindowState="Maximized"
         Title="ServicesWindow" Height="1080" Width="1920">
     <Grid>
-        <StackPanel>
-            <Button
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Image
+            Source="/Images\barberImg.png"
+            Grid.RowSpan="3"
+            />
+        <TextBlock
+            Grid.Row="0"
+                Text="Услуги"
+                FontSize="70"
+                TextAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="10" 
+                Foreground="White"
+                />
+        <Button
+            Grid.Row="0"
                 x:Name="Close"
                 Height="50"
                 Width="50"
                 VerticalAlignment="Center"
                 HorizontalAlignment="Right"
-                Margin="20" Click="Close_Click" 
+                Margin="20"
+                Click="Close_Click" 
                 BorderBrush="{x:Null}" 
                 Foreground="{x:Null}"  
                 >
-                <Button.Background>
-                    <ImageBrush ImageSource="/Images/cross.png"/>
-                </Button.Background>
-            </Button>
-            <TextBlock
-                Text="Услуги"
-                FontSize="70"
-                TextAlignment="Center"
-                VerticalAlignment="Center"
-                Margin="10"
-                />
-            <Button
-                x:Name="Exit" 
+            <Button.Background>
+                <ImageBrush ImageSource="/Images/cross.png"/>
+            </Button.Background>
+        </Button>
+
+        
+        <DataGrid
+            x:Name="AllServices"
+            Grid.Row="1"
+            AutoGenerateColumns="False">
+            <DataGrid.Background>
+                <SolidColorBrush Color="#FFF0F0F0" Opacity="0"/>
+            </DataGrid.Background>
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Услуга" Width="2*" Binding="{Binding NameService}"/>
+                <DataGridTextColumn Header="Цена" Width="*" Binding="{Binding Cost}"/>
+                <DataGridTextColumn Header="Длительность услуги" Width="*" Binding="{Binding TimeServices}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button
+            Grid.Row="2"
+                x:Name="Exit"
                 Content="Выйти"
-                FontSize="35" 
                 Height="70"
                 Width="200"
+                FontSize="35" 
                 Margin="50"
                 VerticalAlignment="Top"
                 Click="Exit_Click"
                 />
-
-        </StackPanel>
     </Grid>
 </Window>

@@ -3,8 +3,9 @@
     "",
     "\\BarberShop",
     "\\BarberShop\\BarberShop",
+    "\\BarberShop\\BarberShop\\EF",
     "\\BarberShop\\BarberShop\\Windows"
   ],
-  "SelectedNode": "\\BarberShop\\BarberShop\\Windows\\StuffWindow.xaml",
+  "SelectedNode": "\\BarberShop\\BarberShop\\ClassEntities.cs",
   "PreviewInSolutionExplorer": false
 }

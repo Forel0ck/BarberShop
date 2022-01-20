@@ -9,6 +9,9 @@
         WindowState="Maximized"
         Title="MainWindow" Height="1080" Width="1920">
     <Grid>
+        <Image
+            Source="/Images\barberImg.png"
+            />
         <StackPanel>
             <Button
                 x:Name="Close"
@@ -25,53 +28,53 @@
                 </Button.Background>
             </Button>
             <TextBlock
-                Text="Барбер Шоп"
-                FontSize="70"
+                Text="Barbershop"
+                FontSize="100"
                 Height="150"
                 TextAlignment="Center"
-                VerticalAlignment="Center"
+                VerticalAlignment="Center" Foreground="White" FontFamily="Franklin Gothic Medium" FontWeight="Normal" FontStyle="Normal"
                 />
             <Button
                 x:Name="Services"
                 Content="Католог услуг"
                 FontSize="50"
                 Height="100"
-                Margin="20" Click="Services_Click"
+                Margin="20" Click="Services_Click" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White"
                 />
             <Button
                 x:Name="Record"
                 Content="Запись на услуг"
                 FontSize="50"
                 Height="100"
-                Margin="20" Click="Record_Click"
+                Margin="20" Click="Record_Click" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="White"
                 />
             <Button
                 x:Name="Personal"
                 Content="Персонал"
                 FontSize="50"
                 Height="100"
-                Margin="20" Click="Personal_Click"
+                Margin="20" Click="Personal_Click" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White"
                 />
             <Button
                 x:Name="Stuff"
                 Content="Расходники"
                 FontSize="50"
                 Height="100"
-                Margin="20" Click="Stuff_Click"
+                Margin="20" Click="Stuff_Click" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="White"
                 />
             <Button
                 x:Name="Report"
                 Content="Отчет"
                 FontSize="50"
                 Height="100"
-                Margin="20" Click="Report_Click"
+                Margin="20" Click="Report_Click" Foreground="White" BorderBrush="{x:Null}" Background="{x:Null}"
                 />
             <Button
                 x:Name="Exit"
                 Content="Выйти из системы"
                 FontSize="50"
                 Height="100"
-                Margin="20" Click="Exit_Click" 
+                Margin="20" Click="Exit_Click" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" 
                 />
         </StackPanel>
 

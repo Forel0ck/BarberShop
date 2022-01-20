@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using static BarberShop.ClassEntities;
 
 namespace BarberShop.Windows
 {
@@ -26,10 +27,19 @@ namespace BarberShop.Windows
 
         private void btAuth_Click(object sender, RoutedEventArgs e)
         {
-            this.Hide();
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.ShowDialog();
-            this.Close();
+            var User = context.Authorization.ToList().
+               Where(p => p.Login == this.txtLog.Text && p.Password == txtPass.Password).FirstOrDefault();
+            if(User != null)
+            {
+                this.Hide();
+                MainWindow mainWindow = new MainWindow();
+                mainWindow.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Вы ввели не правильно пароль или логин");
+            }
         }
         private void Close_Click(object sender, RoutedEventArgs e)
         {

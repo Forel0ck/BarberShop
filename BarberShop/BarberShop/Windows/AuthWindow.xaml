@@ -9,6 +9,7 @@
         WindowStartupLocation="CenterScreen"
         Title="AuthWindow" Height="550" Width="400">
     <Grid>
+        <Image Source="/Images\sdcs.png" />
         <StackPanel>
             <Button
                 x:Name="Close"
@@ -16,7 +17,7 @@
                 Width="30"
                 VerticalAlignment="Center"
                 HorizontalAlignment="Right"
-                Margin="20" Click="Close_Click" 
+                Margin="10" Click="Close_Click" 
                 BorderBrush="{x:Null}" 
                 Foreground="{x:Null}"  
                 >
@@ -29,49 +30,59 @@
                 Height="50"
                 HorizontalAlignment="Center"
                 FontSize="30"
-                Margin="15"
+                Margin="15" Foreground="White"
                 />
             <TextBlock
                 Text="Логин"
                 Height="50"
                 HorizontalAlignment="Center"
                 FontSize="25"
-                Margin="10"
+                Margin="10" Foreground="White"
                 />
             <TextBox 
                 x:Name="txtLog"
                 Height="50"
                 Width="200"
                 FontSize="25"
-                HorizontalAlignment="Center"
                 VerticalContentAlignment="Center"
                 TextAlignment="Center"
+                Background="{x:Null}"
+                BorderBrush="#FF023297" 
+                Foreground="White" 
+                SelectionBrush="{x:Null}"
                      />
             <TextBlock
                 Text="Пароль"
                 Height="50"
                 HorizontalAlignment="Center"
                 FontSize="25"
-                Margin="10"
+                Margin="10" Foreground="White"
                 />
-            <TextBox 
+            <PasswordBox
                 x:Name="txtPass"
                 Height="50"
                 Width="200"
                 FontSize="25"
                 VerticalContentAlignment="Center"
-                HorizontalAlignment="Center"
-                TextAlignment="Center"
+                HorizontalContentAlignment="Center"
+                HorizontalAlignment="Center" 
+                Background="{x:Null}"
+                BorderBrush="#FFFF0C00" 
+                Foreground="White" 
+                SelectionBrush="{x:Null}"
             />
             <Button
                 x:Name="btAuth"
-                Content="Ввод"
+                Content="Вход"
                 FontSize="35"
                 Height="70"
                 Width="200"
-                Margin="75" 
+                Margin="55" 
                 HorizontalAlignment="Center" 
                 Click="btAuth_Click"
+                BorderBrush="{x:Null}"
+                Background="{x:Null}"
+                Foreground="White"
             />
 
         </StackPanel>

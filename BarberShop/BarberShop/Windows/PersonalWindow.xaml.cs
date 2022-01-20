@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using static BarberShop.ClassEntities;
 
 namespace BarberShop.Windows
 {
@@ -22,6 +23,7 @@ namespace BarberShop.Windows
         public PersonalWindow()
         {
             InitializeComponent();
+            AllPersonal.ItemsSource = context.Personnel.ToList();
         }
         private void Exit_Click(object sender, RoutedEventArgs e)
         {

@@ -53,3 +53,10 @@ C:\Users\Forelock\Source\Repos\BarberShop\BarberShop\BarberShop\obj\Debug\Barber
 C:\Users\Forelock\Source\Repos\BarberShop\BarberShop\BarberShop\obj\Debug\BarberShop.csproj.CoreCompileInputs.cache
 C:\Users\Forelock\Source\Repos\BarberShop\BarberShop\BarberShop\obj\Debug\BarberShop.exe
 C:\Users\Forelock\Source\Repos\BarberShop\BarberShop\BarberShop\obj\Debug\BarberShop.pdb
+C:\Users\Forelock\Source\Repos\BarberShop\BarberShop\BarberShop\obj\Debug\BarberShop_Content.g.cs
+C:\Users\Forelock\Source\Repos\BarberShop\BarberShop\BarberShop\bin\Debug\EntityFramework.dll
+C:\Users\Forelock\Source\Repos\BarberShop\BarberShop\BarberShop\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Forelock\Source\Repos\BarberShop\BarberShop\BarberShop\bin\Debug\EntityFramework.xml
+C:\Users\Forelock\Source\Repos\BarberShop\BarberShop\BarberShop\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Forelock\Source\Repos\BarberShop\BarberShop\BarberShop\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\Forelock\Source\Repos\BarberShop\BarberShop\BarberShop\obj\Debug\BarberShop.csproj.CopyComplete
