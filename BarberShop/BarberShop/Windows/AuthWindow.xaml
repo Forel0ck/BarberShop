@@ -83,6 +83,7 @@
                 BorderBrush="{x:Null}"
                 Background="{x:Null}"
                 Foreground="White"
+                Style="{StaticResource MyButtonStyle}"
             />
 
         </StackPanel>

@@ -44,15 +44,15 @@
             </Button.Background>
         </Button>
 
-        
+
         <DataGrid
             x:Name="AllServices"
             Grid.Row="1"
-            AutoGenerateColumns="False">
-            <DataGrid.Background>
-                <SolidColorBrush Color="#FFF0F0F0" Opacity="0"/>
-            </DataGrid.Background>
-
+            AutoGenerateColumns="False"
+            Background="Transparent"
+            RowBackground="Transparent"
+            Foreground="White"
+            >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Услуга" Width="2*" Binding="{Binding NameService}"/>
                 <DataGridTextColumn Header="Цена" Width="*" Binding="{Binding Cost}"/>

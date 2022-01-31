@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BarberShop.EF;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,10 +21,18 @@ namespace BarberShop.Windows
     /// </summary>
     public partial class PersonalWindow : Window
     {
+        List<Personnel> personnels = new List<Personnel>();
         public PersonalWindow()
         {
             InitializeComponent();
             AllPersonal.ItemsSource = context.Personnel.ToList();
+            Filter();
+        }
+        private void Filter()
+        {
+            personnels = ClassEntities.context.Personnel.ToList();
+            personnels = personnels.Where(i => i.INFO.Contains(Search.Text)).ToList();
+            AllPersonal.ItemsSource = personnels;
         }
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
@@ -34,6 +43,19 @@ namespace BarberShop.Windows
         }
         private void Close_Click(object sender, RoutedEventArgs e)
         {
+            this.Close();
+        }
+
+        private void Search_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            Filter();
+        }
+
+        private void Add_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            AddWindow addWindow = new AddWindow();
+            addWindow.ShowDialog();
             this.Close();
         }
     }

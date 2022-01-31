@@ -113,6 +113,16 @@
     <Compile Include="EF\sysdiagrams.cs">
       <DependentUpon>BD.tt</DependentUpon>
     </Compile>
+    <Compile Include="PersonnelData.cs" />
+    <Compile Include="Windows\AddClientWindow.xaml.cs">
+      <DependentUpon>AddClientWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\AddWindow.xaml.cs">
+      <DependentUpon>AddWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ClientWindow.xaml.cs">
+      <DependentUpon>ClientWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
@@ -131,6 +141,14 @@
     <Compile Include="Windows\StuffWindow.xaml.cs">
       <DependentUpon>StuffWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="Windows\AddClientWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\AddWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\AuthWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -142,6 +160,10 @@
     <Compile Include="Windows\AuthWindow.xaml.cs">
       <DependentUpon>AuthWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="Windows\ClientWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\MainWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -208,6 +230,12 @@
     <Resource Include="Images\cross.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Images\mianart.png" />
+    <Resource Include="Images\sdcs.png" />
+    <Resource Include="Images\barberImg.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
     <Content Include="EF\BD.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>BD.edmx</DependentUpon>
@@ -218,8 +246,6 @@
       <DependentUpon>BD.edmx</DependentUpon>
       <LastGenOutput>BD.cs</LastGenOutput>
     </Content>
-    <Resource Include="Images\sdcs.png" />
-    <Resource Include="Images\barberImg.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

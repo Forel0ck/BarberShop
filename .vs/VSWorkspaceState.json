@@ -1,11 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\BarberShop",
-    "\\BarberShop\\BarberShop",
-    "\\BarberShop\\BarberShop\\EF",
-    "\\BarberShop\\BarberShop\\Windows"
+    "\\BarberShop"
   ],
-  "SelectedNode": "\\BarberShop\\BarberShop\\ClassEntities.cs",
+  "SelectedNode": "\\BarberShop\\BarberShop.sln",
   "PreviewInSolutionExplorer": false
 }

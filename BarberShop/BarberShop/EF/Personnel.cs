@@ -28,8 +28,11 @@ namespace BarberShop.EF
         public string Passport_Series { get; set; }
         public int IdGender { get; set; }
         public int IdSpecialization { get; set; }
-        public int Experience { get; set; }
-    
+        public string Experience { get; set; }
+
+        public string INFO { get => $"{FirstName} {LastName} {Phone} {PassportNumber} {Passport_Series} {Experience}"; }
+
+
         public virtual Gender Gender { get; set; }
         public virtual Specialization Specialization { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

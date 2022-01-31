@@ -38,7 +38,7 @@
     <Property Name="Passport_Series" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
     <Property Name="IdGender" Type="Int32" Nullable="false" />
     <Property Name="IdSpecialization" Type="Int32" Nullable="false" />
-    <Property Name="Experience" Type="Int32" Nullable="false" />
+    <Property Name="Experience" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
     <NavigationProperty Name="Gender" Relationship="Self.FK_Personnel_Gender" FromRole="Personnel" ToRole="Gender" />
     <NavigationProperty Name="Specialization" Relationship="Self.FK_Personnel_Specialization" FromRole="Personnel" ToRole="Specialization" />
     <NavigationProperty Name="Record" Relationship="Self.FK_Record_Personnel" FromRole="Personnel" ToRole="Record" />

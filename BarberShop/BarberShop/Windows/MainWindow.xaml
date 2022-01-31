@@ -9,11 +9,23 @@
         WindowState="Maximized"
         Title="MainWindow" Height="1080" Width="1920">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
         <Image
-            Source="/Images\barberImg.png"
+            Source="/Images\mianart.png"
+            Grid.ColumnSpan="2"
+            Grid.RowSpan="5"
             />
-        <StackPanel>
-            <Button
+        <Button
                 x:Name="Close"
                 Height="50"
                 Width="50"
@@ -21,7 +33,8 @@
                 HorizontalAlignment="Right"
                 Margin="20" Click="Close_Click" 
                 BorderBrush="{x:Null}" 
-                Foreground="{x:Null}"  
+                Foreground="{x:Null}" 
+                Grid.Column="1"
                 >
                 <Button.Background>
                     <ImageBrush ImageSource="/Images/cross.png"/>
@@ -32,51 +45,118 @@
                 FontSize="100"
                 Height="150"
                 TextAlignment="Center"
-                VerticalAlignment="Center" Foreground="White" FontFamily="Franklin Gothic Medium" FontWeight="Normal" FontStyle="Normal"
+                VerticalAlignment="Center" 
+                Foreground="White" 
+                FontFamily="Franklin Gothic Medium" 
+                FontWeight="Normal"
+                FontStyle="Normal"
+                Grid.ColumnSpan="2"
+                Grid.Row="0"
                 />
             <Button
                 x:Name="Services"
                 Content="Католог услуг"
                 FontSize="50"
                 Height="100"
-                Margin="20" Click="Services_Click" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White"
+                Margin="20" 
+                Click="Services_Click" 
+                Background="{x:Null}" 
+                BorderBrush="{x:Null}" 
+                Foreground="White"
+                Style="{StaticResource MyButtonStyle}"
+                Grid.Column="0"
+                Grid.Row="1"
+                HorizontalAlignment="Center"
                 />
             <Button
                 x:Name="Record"
                 Content="Запись на услуг"
                 FontSize="50"
                 Height="100"
-                Margin="20" Click="Record_Click" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="White"
+                Margin="20" 
+                Click="Record_Click" 
+                Background="{x:Null}" 
+                BorderBrush="{x:Null}" 
+                Foreground="White"
+                Style="{StaticResource MyButtonStyle}"
+                Grid.Column="1"
+                Grid.Row="1"
+                HorizontalAlignment="Center"
                 />
             <Button
                 x:Name="Personal"
                 Content="Персонал"
                 FontSize="50"
                 Height="100"
-                Margin="20" Click="Personal_Click" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White"
+                Margin="20" 
+                Click="Personal_Click" 
+                Background="{x:Null}" 
+                BorderBrush="{x:Null}" 
+                Foreground="White"
+                Style="{StaticResource MyButtonStyle}"
+                Grid.Column="0"
+                Grid.Row="2"
+                HorizontalAlignment="Center"
+                />
+            <Button
+                x:Name="Client"
+                Content="Клиенты"
+                FontSize="50"
+                Height="100"
+                Margin="20" 
+                Click="Client_Click" 
+                Background="{x:Null}" 
+                BorderBrush="{x:Null}" 
+                Foreground="White"
+                Style="{StaticResource MyButtonStyle}"
+                Grid.Column="1"
+                Grid.Row="2"
+                HorizontalAlignment="Center"
                 />
             <Button
                 x:Name="Stuff"
                 Content="Расходники"
                 FontSize="50"
                 Height="100"
-                Margin="20" Click="Stuff_Click" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="White"
+                Margin="20" 
+                Click="Stuff_Click" 
+                Background="{x:Null}" 
+                BorderBrush="{x:Null}" 
+                Foreground="White"
+                Style="{StaticResource MyButtonStyle}"
+                Grid.Column="0"
+                Grid.Row="3"
+                HorizontalAlignment="Center"
                 />
             <Button
                 x:Name="Report"
                 Content="Отчет"
                 FontSize="50"
                 Height="100"
-                Margin="20" Click="Report_Click" Foreground="White" BorderBrush="{x:Null}" Background="{x:Null}"
+                Margin="20" 
+                Click="Report_Click"
+                Background="{x:Null}" 
+                BorderBrush="{x:Null}" 
+                Foreground="White"
+                Style="{StaticResource MyButtonStyle}"
+                Grid.Column="1"
+                Grid.Row="3"
+                HorizontalAlignment="Center"
                 />
-            <Button
+        <Button
                 x:Name="Exit"
                 Content="Выйти из системы"
                 FontSize="50"
                 Height="100"
-                Margin="20" Click="Exit_Click" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" 
+                Margin="20" 
+                Click="Exit_Click"
+                Background="{x:Null}" 
+                BorderBrush="{x:Null}" 
+                Foreground="White"
+                Style="{StaticResource MyButtonStyle}"
+                Grid.ColumnSpan="2"
+                Grid.Row="4"
+                HorizontalAlignment="Center"
                 />
-        </StackPanel>
-
     </Grid>
 </Window>

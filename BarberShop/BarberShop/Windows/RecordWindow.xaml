@@ -9,6 +9,9 @@
         WindowState="Maximized"
         Title="RecordWindow" Height="1080" Width="1920">
     <Grid>
+        <Image
+            Source="/Images\barberImg.png"
+            />
         <StackPanel>
             <Button
                 x:Name="Close"
@@ -29,7 +32,7 @@
                 FontSize="70"
                 TextAlignment="Center"
                 VerticalAlignment="Center"
-                Margin="10"
+                Margin="10" Foreground="White"
                 />
             <Button
                 x:Name="Exit" 
