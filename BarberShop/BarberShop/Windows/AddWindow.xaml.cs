@@ -61,7 +61,7 @@ namespace BarberShop.Windows
             }
             if (!string.IsNullOrWhiteSpace(Phone.Text))
             {
-                personnel.Phone = Phone.Text;
+                 personnel.Phone = Phone.Text; 
             }
             else
             {
@@ -95,6 +95,18 @@ namespace BarberShop.Windows
                 MessageBox.Show("Вы не ввели стаж");
                 return;
             }
+            //var userPhone = context.Personnel.ToList().Where(i => i.Phone == Phone.Text);
+            //if (userPhone != null)
+            //{
+            //    MessageBox.Show("Такой номер телефона уже есть в базе данных");
+            //    return;
+            //}
+            //var userPasport = context.Personnel.ToList().Where(i => i.PassportNumber == NumberPas.Text && i.Passport_Series == SeriaPas.Text);
+            //if (userPasport !=null)
+            //{
+            //    MessageBox.Show("Сотрудник с такими паспортными даннами уже есть");
+            //    return;
+            //}
             personnel.IdGender = Gender.SelectedIndex + 1;
             personnel.IdSpecialization = Pecialization.SelectedIndex + 1;
 

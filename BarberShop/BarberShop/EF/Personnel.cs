@@ -32,6 +32,8 @@ namespace BarberShop.EF
 
         public string INFO { get => $"{FirstName} {LastName} {Phone} {PassportNumber} {Passport_Series} {Experience}"; }
 
+        public string DOPE { get => $"{FirstName} {LastName}"; }
+
 
         public virtual Gender Gender { get; set; }
         public virtual Specialization Specialization { get; set; }

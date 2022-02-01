@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BarberShop.EF;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using static BarberShop.ClassEntities;
 
 namespace BarberShop.Windows
 {
@@ -22,17 +24,43 @@ namespace BarberShop.Windows
         public RecordWindow()
         {
             InitializeComponent();
+
+            Client.ItemsSource = context.Client.ToList();
+            Client.DisplayMemberPath = "DATA";
+            Client.SelectedIndex = 0;
+
+            Personel.ItemsSource = context.Personnel.ToList();
+            Personel.DisplayMemberPath = "DOPE";
+            Personel.SelectedIndex = 0;
+
+            Service.ItemsSource = context.Services.ToList();
+            Service.DisplayMemberPath = "NameService";
+            Service.SelectedIndex = 0;
         }
-        private void Exit_Click(object sender, RoutedEventArgs e)
+        private void Close_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Exit_Click_1(object sender, RoutedEventArgs e)
         {
             this.Hide();
             MainWindow mainWindow = new MainWindow();
             mainWindow.ShowDialog();
             this.Close();
         }
-        private void Close_Click(object sender, RoutedEventArgs e)
+
+        private void Add_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            Record record = new Record();
+
+            record.idClient = Client.SelectedIndex + 1;
+            record.IdPersonnel = Personel.SelectedIndex + 1;
+            record.IdServices = Service.SelectedIndex + 1;
+
+            MessageBox.Show("Запись добавлен");
+            ClassEntities.context.Record.Add(record);
+            ClassEntities.context.SaveChanges();
         }
     }
 }

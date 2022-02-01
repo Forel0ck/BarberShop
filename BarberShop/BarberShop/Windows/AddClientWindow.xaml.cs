@@ -47,19 +47,28 @@ namespace BarberShop.Windows
                 MessageBox.Show("Вы не ввели фамилию");
                 return;
             }
+
+            
             if (!string.IsNullOrWhiteSpace(Phone.Text))
             {
-                client.Phone = Phone.Text;
+               
+                 client.Phone = Phone.Text;
             }
             else
             {
                 MessageBox.Show("Вы не ввели номер");
                 return;
             }
+            //var userPhone = context.Client.ToList().Where(i => i.Phone == Phone.Text);
+            //if (userPhone != null)
+            //{
+            //    MessageBox.Show("Такой номер телефона уже есть в базе данных");
+            //    return;
+            //}
 
             MessageBox.Show("Пользователь добавлен");
-            context.Client.Add(client);
-            context.SaveChanges();
+            ClassEntities.context.Client.Add(client);
+            ClassEntities.context.SaveChanges();
 
             this.Hide();
             ClientWindow clientWindow = new ClientWindow();
