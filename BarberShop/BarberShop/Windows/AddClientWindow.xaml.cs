@@ -29,9 +29,9 @@ namespace BarberShop.Windows
         private void Add_Click(object sender, RoutedEventArgs e)
         {
             Client client = new Client();
-            if (!string.IsNullOrWhiteSpace(Lname.Text))
+            if (!string.IsNullOrWhiteSpace(Fname.Text))
             {
-                client.LastName = Lname.Text;
+                client.FirstName = Fname.Text;
             }
             else
             {
@@ -111,6 +111,39 @@ namespace BarberShop.Windows
         private void Close_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void Phone_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (sender is TextBox textBox)
+            {
+                textBox.Text = new string
+                    (
+                         textBox.Text.Where(ch => ch == '+' || ch == '-' || (ch >= '0' && ch <= '9')).ToArray()
+                    );
+            }
+        }
+
+        private void Fname_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (sender is TextBox textBox)
+            {
+                textBox.Text = new string
+                    (
+                         textBox.Text.Where(ch => (ch >= 'а' && ch <= 'я') || (ch >= 'А' && ch <= 'Я') || ch == 'ё' || ch == 'Ё' || (ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')).ToArray()
+                    );
+            }
+        }
+
+        private void Lname_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (sender is TextBox textBox)
+            {
+                textBox.Text = new string
+                    (
+                         textBox.Text.Where(ch => (ch >= 'а' && ch <= 'я') || (ch >= 'А' && ch <= 'Я') || ch == 'ё' || ch == 'Ё' || (ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')).ToArray()
+                    );
+            }
         }
     }
 }

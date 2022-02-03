@@ -128,6 +128,73 @@ namespace BarberShop.Windows
             this.Close();
         }
 
+
+        private void Fname_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (sender is TextBox textBox)
+            {
+                textBox.Text = new string
+                    (
+                         textBox.Text.Where(ch => (ch >= 'а' && ch <= 'я') || (ch >= 'А' && ch <= 'Я') || ch == 'ё' || ch == 'Ё' || (ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')).ToArray()
+                    );
+            }
+        }
+
+        private void Lname_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (sender is TextBox textBox)
+            {
+                textBox.Text = new string
+                    (
+                         textBox.Text.Where(ch => (ch >= 'а' && ch <= 'я') || (ch >= 'А' && ch <= 'Я') || ch == 'ё' || ch == 'Ё' || (ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')).ToArray()
+                    );
+            }
+        }
+
+        private void Phone_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (sender is TextBox textBox)
+            {
+                textBox.Text = new string
+                    (
+                         textBox.Text.Where(ch => ch == '+' || ch == '-' || (ch >= '0' && ch <= '9')).ToArray()
+                    );
+            }
+        }
+
+        private void NumberPas_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (sender is TextBox textBox)
+            {
+                textBox.Text = new string
+                    (
+                         textBox.Text.Where(ch => (ch >= '0' && ch <= '9')).ToArray()
+                    );
+            }
+        }
+
+        private void SeriaPas_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (sender is TextBox textBox)
+            {
+                textBox.Text = new string
+                    (
+                         textBox.Text.Where(ch => (ch >= '0' && ch <= '9')).ToArray()
+                    );
+            }
+        }
+
+        private void Experience_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (sender is TextBox textBox)
+            {
+                textBox.Text = new string
+                    (
+                         textBox.Text.Where(ch => (ch >= '0' && ch <= '9')).ToArray()
+                    );
+            }
+        }
+
         private void Fname_PreviewKeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Space)

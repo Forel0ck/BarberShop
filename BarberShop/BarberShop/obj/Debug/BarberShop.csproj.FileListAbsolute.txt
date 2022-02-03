@@ -101,3 +101,9 @@ C:\Users\user\Source\Repos\BarberShop\BarberShop\BarberShop\obj\Debug\Windows\Ad
 C:\Users\user\Source\Repos\BarberShop\BarberShop\BarberShop\obj\Debug\Windows\AddWindow.baml
 C:\Users\user\Source\Repos\BarberShop\BarberShop\BarberShop\obj\Debug\Windows\AddClientWindow.g.cs
 C:\Users\user\Source\Repos\BarberShop\BarberShop\BarberShop\obj\Debug\Windows\AddClientWindow.baml
+C:\Users\user\Source\Repos\BarberShop\BarberShop\BarberShop\bin\Debug\MaterialDesignColors.dll
+C:\Users\user\Source\Repos\BarberShop\BarberShop\BarberShop\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\user\Source\Repos\BarberShop\BarberShop\BarberShop\bin\Debug\MaterialDesignColors.pdb
+C:\Users\user\Source\Repos\BarberShop\BarberShop\BarberShop\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\user\Source\Repos\BarberShop\BarberShop\BarberShop\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\user\Source\Repos\BarberShop\BarberShop\BarberShop\bin\Debug\ru\EntityFramework.SqlServer.resources.dll

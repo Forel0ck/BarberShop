@@ -100,7 +100,7 @@
             Grid.Row="3"
             Grid.Column="0"
                 x:Name="Exit"
-                Content="Выйти"
+                Content="Назад"
                 Height="90"
                 Width="300"
                 FontSize="55" 

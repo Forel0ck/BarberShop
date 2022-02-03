@@ -33,7 +33,7 @@
                 />
             <Button
                 x:Name="Exit" 
-                Content="Выйти"
+                Content="Назад"
                 FontSize="35" 
                 Height="70"
                 Width="200"

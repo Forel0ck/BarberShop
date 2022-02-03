@@ -63,7 +63,7 @@
         <Button
             Grid.Row="2"
                 x:Name="Exit"
-                Content="Выйти"
+                Content="Назад"
                 Height="70"
                 Width="200"
                 FontSize="35" 
