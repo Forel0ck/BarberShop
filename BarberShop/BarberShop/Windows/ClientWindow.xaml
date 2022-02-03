@@ -45,7 +45,8 @@
                 Margin="20"
                 Click="Close_Click" 
                 BorderBrush="{x:Null}" 
-                Foreground="{x:Null}"  
+                Foreground="{x:Null}" 
+            Style="{StaticResource MyButtonStyle}"
                 >
             <Button.Background>
                 <ImageBrush ImageSource="/Images/cross.png"/>
@@ -83,7 +84,8 @@
             AutoGenerateColumns="False"
             Background="Transparent"
             RowBackground="Transparent"
-            Foreground="White">
+            Foreground="White"
+            FontSize="25">
 
 
             <DataGrid.Columns>

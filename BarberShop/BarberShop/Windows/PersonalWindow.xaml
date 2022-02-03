@@ -81,7 +81,8 @@
             AutoGenerateColumns="False"
             Background="Transparent"
             RowBackground="Transparent"
-            Foreground="White">
+            Foreground="White"
+            FontSize="25">
             
 
             <DataGrid.Columns >
