@@ -51,6 +51,7 @@
             AutoGenerateColumns="False"
             Background="Transparent"
             RowBackground="Transparent"
+            IsReadOnly="True"
             Foreground="White">
             
 

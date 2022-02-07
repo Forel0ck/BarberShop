@@ -22,18 +22,53 @@ namespace BarberShop.Windows
     public partial class PersonalWindow : Window
     {
         List<Personnel> personnels = new List<Personnel>();
+        List<string> ForSort = new List<string>()
+        {
+            "По умолчанию","По фамилия","По имени","По телефону","По специальности"
+        };
         public PersonalWindow()
         {
             InitializeComponent();
             AllPersonal.ItemsSource = context.Personnel.ToList();
+            Sort.ItemsSource = ForSort;
+            Sort.SelectedIndex = 0;
             Filter();
         }
         private void Filter()
         {
             personnels = ClassEntities.context.Personnel.ToList();
             personnels = personnels.Where(i => i.INFO.Contains(Search.Text)).ToList();
+            
+
+            switch (Sort.SelectedIndex)
+            {
+                case 0:
+                    personnels = personnels.OrderBy(i => i.IdPersonnel).ToList();
+                    break;
+                case 1:
+                    personnels = personnels.OrderBy(i => i.FirstName).ToList();
+                    break;
+                case 2:
+                    personnels = personnels.OrderBy(i => i.LastName).ToList();
+                    break;
+                case 3:
+                    personnels = personnels.OrderBy(i => i.Phone).ToList();
+                    break;
+                case 4:
+                    personnels = personnels.OrderBy(i => i.IdSpecialization).ToList();
+                    break;
+                default:
+                    personnels = personnels.OrderBy(i => i.IdPersonnel).ToList();
+                    break;
+            }
+
+            if (AllPersonal == null)
+            {
+                MessageBox.Show("Такой записи нет");
+            }
             AllPersonal.ItemsSource = personnels;
         }
+        
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
             this.Hide();
@@ -57,6 +92,11 @@ namespace BarberShop.Windows
             AddWindow addWindow = new AddWindow();
             addWindow.ShowDialog();
             this.Close();
+        }
+
+        private void Sort_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Filter(); 
         }
     }
 }

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -37,9 +38,23 @@ namespace BarberShop.Windows
         {
             this.Close();
         }
-
+        private Regex regex = new Regex(@"\d{3}-\d{3}-\d{4}"); 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
+            var chekPhone = Phone.Text;
+            var userPhone = ClassEntities.context.Client.Where(i => i.Phone == Phone.Text).FirstOrDefault();
+
+            if (userPhone != null)
+            {
+                MessageBox.Show("Такой номер уже существует", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            else
+            if (!regex.IsMatch(chekPhone))
+            {
+                MessageBox.Show("Номер не корректен.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
             Personnel personnel = new Personnel();
             if (!string.IsNullOrWhiteSpace(Fname.Text))
             {
@@ -95,18 +110,7 @@ namespace BarberShop.Windows
                 MessageBox.Show("Вы не ввели стаж");
                 return;
             }
-            //var userPhone = context.Personnel.ToList().Where(i => i.Phone == Phone.Text);
-            //if (userPhone != null)
-            //{
-            //    MessageBox.Show("Такой номер телефона уже есть в базе данных");
-            //    return;
-            //}
-            //var userPasport = context.Personnel.ToList().Where(i => i.PassportNumber == NumberPas.Text && i.Passport_Series == SeriaPas.Text);
-            //if (userPasport !=null)
-            //{
-            //    MessageBox.Show("Сотрудник с такими паспортными даннами уже есть");
-            //    return;
-            //}
+            
             personnel.IdGender = Gender.SelectedIndex + 1;
             personnel.IdSpecialization = Pecialization.SelectedIndex + 1;
 
@@ -195,6 +199,8 @@ namespace BarberShop.Windows
             }
         }
 
+
+
         private void Fname_PreviewKeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Space)
@@ -241,6 +247,11 @@ namespace BarberShop.Windows
             {
                 e.Handled = true;
             }
+        }
+
+        private void Phone_GotFocus(object sender, RoutedEventArgs e)
+        {
+            Phone.Text = "888-888-8888";
         }
     }
 }

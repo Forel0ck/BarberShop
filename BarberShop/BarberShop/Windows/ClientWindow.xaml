@@ -23,7 +23,11 @@
             Source="/Images\barberImg.png"
             Grid.RowSpan="4"
             Grid.ColumnSpan="2"
-            />
+            >
+            <Image.Effect>
+                <BlurEffect Radius="15"/>
+            </Image.Effect>
+        </Image>
         <TextBlock
             Grid.Row="0"
             Grid.ColumnSpan="2"
@@ -54,7 +58,7 @@
         </Button>
         <WrapPanel
             Grid.Row="1"
-            Grid.Column="0"
+            Grid.ColumnSpan="2"
             >
             <TextBlock
                 Text="Поиск:"
@@ -74,6 +78,24 @@
                 Width="500"
                 TextChanged="Search_TextChanged"    
                 />
+            <TextBlock
+                Text="Фильтор:"
+                FontSize="55"
+                Foreground="White"
+                HorizontalAlignment="Left"
+                TextAlignment="Justify"
+                VerticalAlignment="Center"
+                Margin="25"
+                />
+            <ComboBox
+                x:Name="Sort"
+                FontSize="55"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Margin="10"
+                Width="500"
+                SelectionChanged="Sort_SelectionChanged"    
+                />
         </WrapPanel>
 
 
@@ -85,6 +107,7 @@
             Background="Transparent"
             RowBackground="Transparent"
             Foreground="White"
+            IsReadOnly="True"
             FontSize="25">
 
 

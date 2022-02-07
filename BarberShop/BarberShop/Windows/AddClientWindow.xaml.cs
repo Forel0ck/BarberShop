@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -26,16 +27,26 @@ namespace BarberShop.Windows
             InitializeComponent();
         }
 
+        private Regex regex = new Regex(@"\d{3}-\d{3}-\d{4}"); 
+
         private void Add_Click(object sender, RoutedEventArgs e)
         {
             Client client = new Client();
+            var userPhone = ClassEntities.context.Client.Where(i => i.Phone == Phone.Text).FirstOrDefault();
+
+            if (userPhone!=null)
+            {
+                MessageBox.Show("Такой номер уже существует", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            else
             if (!string.IsNullOrWhiteSpace(Fname.Text))
             {
                 client.FirstName = Fname.Text;
             }
             else
             {
-                MessageBox.Show("Вы не ввели имя");
+                MessageBox.Show("Вы не ввели имя", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
             if (!string.IsNullOrWhiteSpace(Lname.Text))
@@ -44,7 +55,7 @@ namespace BarberShop.Windows
             }
             else
             {
-                MessageBox.Show("Вы не ввели фамилию");
+                MessageBox.Show("Вы не ввели фамилию","Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
@@ -56,15 +67,17 @@ namespace BarberShop.Windows
             }
             else
             {
-                MessageBox.Show("Вы не ввели номер");
+                MessageBox.Show("Вы не ввели номер.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
-            //var userPhone = context.Client.ToList().Where(i => i.Phone == Phone.Text);
-            //if (userPhone != null)
-            //{
-            //    MessageBox.Show("Такой номер телефона уже есть в базе данных");
-            //    return;
-            //}
+            var chekPhone = Phone.Text;
+
+            if (!regex.IsMatch(chekPhone))
+            {
+                MessageBox.Show("Номер не корректен.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
 
             MessageBox.Show("Пользователь добавлен");
             ClassEntities.context.Client.Add(client);

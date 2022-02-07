@@ -68,7 +68,6 @@ C:\Users\user\Source\Repos\BarberShop\BarberShop\BarberShop\bin\Debug\EntityFram
 C:\Users\user\Source\Repos\BarberShop\BarberShop\BarberShop\bin\Debug\EntityFramework.xml
 C:\Users\user\Source\Repos\BarberShop\BarberShop\BarberShop\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\user\Source\Repos\BarberShop\BarberShop\BarberShop\bin\Debug\ru\EntityFramework.resources.dll
-C:\Users\user\Source\Repos\BarberShop\BarberShop\BarberShop\obj\Debug\BarberShop.csprojAssemblyReference.cache
 C:\Users\user\Source\Repos\BarberShop\BarberShop\BarberShop\obj\Debug\Windows\AuthWindow.g.cs
 C:\Users\user\Source\Repos\BarberShop\BarberShop\BarberShop\obj\Debug\Windows\MainWindow.g.cs
 C:\Users\user\Source\Repos\BarberShop\BarberShop\BarberShop\obj\Debug\Windows\PersonalWindow.g.cs
@@ -107,3 +106,4 @@ C:\Users\user\Source\Repos\BarberShop\BarberShop\BarberShop\bin\Debug\MaterialDe
 C:\Users\user\Source\Repos\BarberShop\BarberShop\BarberShop\bin\Debug\MaterialDesignThemes.Wpf.pdb
 C:\Users\user\Source\Repos\BarberShop\BarberShop\BarberShop\bin\Debug\MaterialDesignThemes.Wpf.xml
 C:\Users\user\Source\Repos\BarberShop\BarberShop\BarberShop\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\user\Source\Repos\BarberShop\BarberShop\BarberShop\obj\Debug\BarberShop.csprojAssemblyReference.cache

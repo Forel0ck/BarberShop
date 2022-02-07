@@ -30,7 +30,11 @@
             Grid.RowSpan="10"
             Grid.ColumnSpan="2"
             Stretch="Fill"
-            />
+            >
+            <Image.Effect>
+                <BlurEffect Radius="15"/>
+            </Image.Effect>
+        </Image>
         <TextBlock
             Grid.Row="0"
             Grid.ColumnSpan="2"
@@ -142,7 +146,9 @@
             Foreground="White" 
             BorderBrush="Red"
             TextChanged="Lname_TextChanged"
-            PreviewKeyDown="Lname_PreviewKeyDown" Height="93" VerticalAlignment="Top"  
+            PreviewKeyDown="Lname_PreviewKeyDown" 
+            Height="93" 
+            VerticalAlignment="Top"  
              />
         <TextBox
              x:Name="Phone"
@@ -153,13 +159,13 @@
             HorizontalAlignment="Left"
             VerticalContentAlignment="Center"
             FontSize="60" 
-            MaxLength="15"
-            MinLines="10"
+            MaxLength="12"
             Background="{x:Null}" 
             Foreground="White" 
             BorderBrush="Red"
             TextChanged="Phone_TextChanged"
             PreviewKeyDown="Phone_PreviewKeyDown"
+            GotFocus="Phone_GotFocus"
              />
         <TextBox
              x:Name="NumberPas"
@@ -171,7 +177,6 @@
             VerticalContentAlignment="Center"
             FontSize="60" 
             MaxLength="6"
-            MinLines="6"
             Background="{x:Null}" 
             Foreground="White" 
             BorderBrush="Red"
@@ -188,7 +193,6 @@
             VerticalContentAlignment="Center"
             FontSize="60" 
             MaxLength="4"
-            MinLines="4"
             Background="{x:Null}" 
             Foreground="White" 
             BorderBrush="Red"
@@ -217,6 +221,7 @@
             Grid.Row="6"
             Margin="10 0 0 0"
             Width="400"
+            FontSize="30"
             HorizontalAlignment="Left"
             VerticalContentAlignment="Center"
             >
@@ -230,6 +235,7 @@
             Grid.Row="7"
             Margin="10 0 0 0"
             Width="400"
+            FontSize="30"
             HorizontalAlignment="Left"
             VerticalContentAlignment="Center"
             >
@@ -275,7 +281,7 @@
             Grid.Row="9"
             Grid.Column="0"
                 x:Name="Exit"
-                Content="Назд"
+                Content="Назaд"
                 Height="90"
                 Width="300"
                 FontSize="55" 

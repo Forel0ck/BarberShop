@@ -53,6 +53,7 @@
             RowBackground="Transparent"
             Foreground="White"
             FontSize="25"
+            IsReadOnly="True"
             >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Услуга" Width="2*" Binding="{Binding NameService}"/>

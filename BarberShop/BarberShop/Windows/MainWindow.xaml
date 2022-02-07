@@ -24,7 +24,11 @@
             Source="/Images\mianart.png"
             Grid.ColumnSpan="2"
             Grid.RowSpan="5"
-            />
+            >
+            <Image.Effect>
+                <BlurEffect Radius="15"/>
+            </Image.Effect>
+        </Image>
         <Button
                 x:Name="Close"
                 Height="50"
