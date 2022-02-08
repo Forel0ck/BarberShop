@@ -25,6 +25,22 @@ namespace BarberShop.Windows
         public AddClientWindow()
         {
             InitializeComponent();
+
+            Change.Visibility = Visibility.Hidden;
+            Change.IsEnabled = false;
+        }
+
+        public AddClientWindow(Client client)
+        {
+            InitializeComponent();
+
+            Fname.Text = client.FirstName;
+            Lname.Text = client.LastName;
+            Phone.Text = client.Phone;
+
+            Add.Visibility = Visibility.Hidden;
+            Add.IsEnabled = false;
+
         }
 
         private Regex regex = new Regex(@"\d{3}-\d{3}-\d{4}"); 
@@ -156,6 +172,69 @@ namespace BarberShop.Windows
                     (
                          textBox.Text.Where(ch => (ch >= 'а' && ch <= 'я') || (ch >= 'А' && ch <= 'Я') || ch == 'ё' || ch == 'Ё' || (ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')).ToArray()
                     );
+            }
+        }
+
+        private void Change_Click(object sender, RoutedEventArgs e)
+        {
+            var pers = context.Client.Where(i => i.IdClient == PersonnelData.IdClient).FirstOrDefault();
+            pers.LastName = Lname.Text.Trim();
+            pers.FirstName = Fname.Text.Trim();
+            pers.Phone = Phone.Text.Trim();
+            
+             Client client = new Client();
+            if (!string.IsNullOrWhiteSpace(Fname.Text))
+            {
+                client.FirstName = Fname.Text;
+            }
+            else
+            {
+                MessageBox.Show("Вы не ввели имя");
+                return;
+            }
+            if (!string.IsNullOrWhiteSpace(Lname.Text))
+            {
+                client.LastName = Lname.Text;
+            }
+            else
+            {
+                MessageBox.Show("Вы не ввели фамилию");
+                return;
+            }
+            if (!string.IsNullOrWhiteSpace(Phone.Text))
+            {
+                client.Phone = Phone.Text;
+            }
+            else
+            {
+                MessageBox.Show("Вы не ввели номер");
+                return;
+            }
+            var chekPhone = Phone.Text;
+            var userPhone = ClassEntities.context.Client.Where(i => i.Phone == Phone.Text).FirstOrDefault();
+
+            //if ((userPhone != null) )
+            //{
+            //    MessageBox.Show("Такой номер уже существует", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            //    return;
+            //}
+            //else
+            if (!regex.IsMatch(chekPhone))
+            {
+                MessageBox.Show("Номер не корректен.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            var chek = MessageBox.Show($"Вы хотите изменить данные ", "Подтверждение", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+            if (chek == MessageBoxResult.Yes)
+            {
+                context.SaveChanges();
+
+                MessageBox.Show("Данные изменены");
+                this.Hide();
+                PersonalWindow personalWindow = new PersonalWindow();
+                personalWindow.ShowDialog();
+                this.Close();
             }
         }
     }

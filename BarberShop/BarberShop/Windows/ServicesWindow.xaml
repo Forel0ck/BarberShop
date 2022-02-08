@@ -60,6 +60,11 @@
                 <DataGridTextColumn Header="Цена" Width="*" Binding="{Binding Cost}"/>
                 <DataGridTextColumn Header="Длительность услуги" Width="*" Binding="{Binding TimeServices}"/>
             </DataGrid.Columns>
+            <DataGrid.Resources>
+                <Style BasedOn="{StaticResource {x:Type DataGridColumnHeader}}" TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="Blue" />
+                </Style>
+            </DataGrid.Resources>
         </DataGrid>
         <Button
             Grid.Row="2"

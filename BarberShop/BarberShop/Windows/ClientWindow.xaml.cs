@@ -98,5 +98,51 @@ namespace BarberShop.Windows
         {
             Filter();
         }
+
+        private void change_Click(object sender, RoutedEventArgs e)
+        {
+            if (AllClient.SelectedItem is Client client)
+            {
+                var resMAss = MessageBox.Show($"Вы хотите изменить пользователя {client.LastName}  {client.FirstName}", "Предупреждение", MessageBoxButton.YesNo);
+                if (resMAss == MessageBoxResult.Yes)
+                {
+                    this.Hide();
+                    AddClientWindow addClientWindow = new AddClientWindow(client);
+                    PersonnelData.IdClient = client.IdClient;
+                    addClientWindow.ShowDialog();
+                    this.Close();
+                }
+                else
+                {
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show($"Вы не выбрали пользователя", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void delete_Click(object sender, RoutedEventArgs e)
+        {
+            if (AllClient.SelectedItem is Client client)
+            {
+                var resMass = MessageBox.Show($"Вы хотите удалить пользователя {client.LastName}  {client.FirstName}", "Предупреждение", MessageBoxButton.YesNo);
+                if (resMass == MessageBoxResult.Yes)
+                {
+                    context.Client.Remove(context.Client.Where(i => i.IdClient == client.IdClient).FirstOrDefault());
+                    context.SaveChanges();
+                    AllClient.ItemsSource = context.Client.ToList();
+                }
+                else
+                {
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show($"Вы не выбрали пользователя", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
     }
 }

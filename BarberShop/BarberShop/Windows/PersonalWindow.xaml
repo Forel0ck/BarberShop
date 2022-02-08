@@ -18,11 +18,12 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Image
             Source="/Images\barberImg.png"
             Grid.RowSpan="4"
-            Grid.ColumnSpan="2"
+            Grid.ColumnSpan="3"
             >
             <Image.Effect>
                 <BlurEffect Radius="14.5"/>
@@ -30,7 +31,7 @@
         </Image>
         <TextBlock
             Grid.Row="0"
-            Grid.ColumnSpan="2"
+            Grid.ColumnSpan="3"
                 Text="Информация о персонале"
                 FontSize="70"
                 TextAlignment="Center"
@@ -40,7 +41,7 @@
                 />
         <Button
             Grid.Row="0"
-            Grid.ColumnSpan="2"
+            Grid.ColumnSpan="3"
                 x:Name="Close"
                 Height="50"
                 Width="50"
@@ -57,11 +58,11 @@
         </Button>
         <WrapPanel
             Grid.Row="1"
-            Grid.ColumnSpan="2"
+            Grid.ColumnSpan="3"
             >
             <TextBlock
                 Text="Поиск:"
-                FontSize="55"
+                FontSize="25"
                 Foreground="White"
                 HorizontalAlignment="Left"
                 TextAlignment="Justify"
@@ -70,16 +71,16 @@
                 />
             <TextBox
                 x:Name="Search"
-                FontSize="55"
+                FontSize="25"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Center"
                 Margin="10"
-                Width="500"
-                TextChanged="Search_TextChanged"  
+                Width="350"
+                TextChanged="Search_TextChanged" Background="#FF324AB2" Foreground="White" BorderBrush="White"  
                 />
             <TextBlock
-                Text="Фильтор:"
-                FontSize="55"
+                Text="Фильтр:"
+                FontSize="25"
                 Foreground="White"
                 HorizontalAlignment="Left"
                 TextAlignment="Justify"
@@ -88,25 +89,27 @@
                 />
             <ComboBox
                 x:Name="Sort"
-                FontSize="55"
+                FontSize="25"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Center"
                 Margin="10"
-                Width="500"
+                Width="350"
                 SelectionChanged="Sort_SelectionChanged"
+               
                 />
         </WrapPanel>
         <DataGrid
             x:Name="AllPersonal"
             Grid.Row="2"
-            Grid.ColumnSpan="2"
+            Grid.ColumnSpan="3"
             AutoGenerateColumns="False"
             Background="Transparent"
             RowBackground="Transparent"
             Foreground="White"
             IsReadOnly="True"
-            FontSize="25">
             
+            FontSize="25">
+
 
             <DataGrid.Columns >
                 <DataGridTextColumn Header="Имя" Width="*" Binding="{Binding FirstName}"/>
@@ -118,7 +121,12 @@
                 <DataGridTextColumn Header="Спецальность" Width="*" Binding="{Binding Specialization.SpecializationName}"/>
                 <DataGridTextColumn Header="Стаж" Width="0.5*" Binding="{Binding Experience}"/>
             </DataGrid.Columns>
-        </DataGrid>
+            <DataGrid.Resources>
+                    <Style BasedOn="{StaticResource {x:Type DataGridColumnHeader}}" TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="#324AB2" />
+                    </Style>
+                </DataGrid.Resources>
+            </DataGrid>
 
         <Button
             Grid.Row="3"
@@ -127,7 +135,7 @@
                 Content="Назад"
                 Height="90"
                 Width="300"
-                FontSize="55" 
+                FontSize="35" 
                 Margin="10"
                 VerticalAlignment="Center"
                 Click="Exit_Click"
@@ -143,7 +151,7 @@
                 Content="Добавить"
                 Height="90"
                 Width="300"
-                FontSize="55" 
+                FontSize="45" 
                 Margin="10"
                 VerticalAlignment="Center"
                 Click="Add_Click"
@@ -152,6 +160,48 @@
                 Foreground="White"
                 Style="{StaticResource MyButtonStyle}"
                 />
-
+        <Button
+            Grid.Row="3"
+            Grid.Column="2"
+            HorizontalAlignment="Left"
+                x:Name="change"
+                Content="Изменить"
+                Height="90"
+                Width="300"
+                FontSize="35" 
+                Margin="10"
+                VerticalAlignment="Center"
+                Click="change_Click" 
+                Background="{x:Null}" 
+                BorderBrush="{x:Null}" 
+                Foreground="White"
+                Style="{StaticResource MyButtonStyle}"
+                />
+        <Button
+            Grid.Row="3"
+            Grid.Column="2"
+            HorizontalAlignment="Right"
+                x:Name="delete"
+                Content="Удалить"
+                Height="90"
+                Width="300"
+                FontSize="35" 
+                Margin="10"
+                VerticalAlignment="Center"
+                Click="delete_Click" 
+                Background="{x:Null}" 
+                BorderBrush="{x:Null}" 
+                Foreground="White"
+                Style="{StaticResource MyButtonStyle}"
+                />
+        <TextBlock
+            Text="/"
+            Grid.Column="2"
+            Grid.Row="3"
+            FontSize="100" 
+            Foreground="White"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Stretch"
+            />
     </Grid>
 </Window>

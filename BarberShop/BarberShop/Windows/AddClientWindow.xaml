@@ -135,6 +135,22 @@
             BorderBrush="Red"
             PreviewKeyDown="Phone_PreviewKeyDown"
              />
+        <Button
+            Grid.Row="4"
+            Grid.Column="1"
+                x:Name="Change"
+                Content="Изменить"
+                Height="90"
+                Width="300"
+                FontSize="55" 
+                Margin="10"
+                VerticalAlignment="Center"
+                Click="Change_Click"
+                Background="{x:Null}" 
+                BorderBrush="{x:Null}" 
+                Foreground="White"
+                Style="{StaticResource MyButtonStyle}"
+                />
 
         <Button
             Grid.Row="4"

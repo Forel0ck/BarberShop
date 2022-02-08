@@ -279,6 +279,22 @@
                 />
         <Button
             Grid.Row="9"
+            Grid.Column="1"
+                x:Name="Change"
+                Content="Изменить"
+                Height="90"
+                Width="300"
+                FontSize="55" 
+                Margin="10"
+                VerticalAlignment="Center"
+                Click="Change_Click"
+                Background="{x:Null}" 
+                BorderBrush="{x:Null}" 
+                Foreground="White"
+                Style="{StaticResource MyButtonStyle}"
+                />
+        <Button
+            Grid.Row="9"
             Grid.Column="0"
                 x:Name="Exit"
                 Content="Назaд"
