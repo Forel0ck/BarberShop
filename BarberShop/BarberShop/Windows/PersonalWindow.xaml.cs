@@ -144,5 +144,31 @@ namespace BarberShop.Windows
                 MessageBox.Show($"Вы не выбрали пользователя", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
+        private void AllPersonal_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Delete  || e.Key == Key.Back)
+            {
+                if (AllPersonal.SelectedItem is Personnel personnel)
+                {
+                    var resMass = MessageBox.Show($"Вы хотите удалить пользователя {personnel.LastName}  {personnel.FirstName}", "Предупреждение", MessageBoxButton.YesNo);
+                    if (resMass == MessageBoxResult.Yes)
+                    {
+                        context.Personnel.Remove(context.Personnel.Where(i => i.IdPersonnel == personnel.IdPersonnel).FirstOrDefault());
+                        context.SaveChanges();
+                        AllPersonal.ItemsSource = context.Personnel.ToList();
+                    }
+                    else
+                    {
+                        return;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show($"Вы не выбрали пользователя", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+            Filter();
+        }
     }
 }

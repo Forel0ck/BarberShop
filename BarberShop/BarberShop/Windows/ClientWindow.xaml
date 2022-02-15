@@ -110,7 +110,9 @@
             RowBackground="Transparent"
             Foreground="White"
             IsReadOnly="True"
-            FontSize="25" BorderBrush="#FF324AB2">
+            KeyUp="AllClient_KeyUp"
+            FontSize="25" 
+            BorderBrush="#FF324AB2">
 
 
             <DataGrid.Columns>

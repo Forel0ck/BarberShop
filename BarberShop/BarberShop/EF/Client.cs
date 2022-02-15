@@ -27,8 +27,6 @@ namespace BarberShop.EF
 
         public string FIO { get => $"{FirstName} {LastName} {Phone}"; }
 
-        public string DATA { get => $"{FirstName} {LastName}"; }
-
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Record> Record { get; set; }
     }

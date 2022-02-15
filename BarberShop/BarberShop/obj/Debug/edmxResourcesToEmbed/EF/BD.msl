@@ -1,101 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="Хранилище BarberShopModelContainer" CdmEntityContainer="BarberShopEntities1">
-    <EntitySetMapping Name="Authorization">
-      <EntityTypeMapping TypeName="BarberShopModel.Authorization">
-        <MappingFragment StoreEntitySet="Authorization">
-          <ScalarProperty Name="IdAuthorization" ColumnName="IdAuthorization" />
-          <ScalarProperty Name="Login" ColumnName="Login" />
-          <ScalarProperty Name="Password" ColumnName="Password" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Client">
-      <EntityTypeMapping TypeName="BarberShopModel.Client">
-        <MappingFragment StoreEntitySet="Client">
-          <ScalarProperty Name="IdClient" ColumnName="IdClient" />
-          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
-          <ScalarProperty Name="LastName" ColumnName="LastName" />
-          <ScalarProperty Name="Phone" ColumnName="Phone" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Gender">
-      <EntityTypeMapping TypeName="BarberShopModel.Gender">
-        <MappingFragment StoreEntitySet="Gender">
-          <ScalarProperty Name="IdGender" ColumnName="IdGender" />
-          <ScalarProperty Name="GenderName" ColumnName="GenderName" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Personnel">
-      <EntityTypeMapping TypeName="BarberShopModel.Personnel">
-        <MappingFragment StoreEntitySet="Personnel">
-          <ScalarProperty Name="IdPersonnel" ColumnName="IdPersonnel" />
-          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
-          <ScalarProperty Name="LastName" ColumnName="LastName" />
-          <ScalarProperty Name="Phone" ColumnName="Phone" />
-          <ScalarProperty Name="PassportNumber" ColumnName="PassportNumber" />
-          <ScalarProperty Name="Passport_Series" ColumnName="Passport&#xA;Series" />
-          <ScalarProperty Name="IdGender" ColumnName="IdGender" />
-          <ScalarProperty Name="IdSpecialization" ColumnName="IdSpecialization" />
-          <ScalarProperty Name="Experience" ColumnName="Experience" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Record">
-      <EntityTypeMapping TypeName="BarberShopModel.Record">
-        <MappingFragment StoreEntitySet="Record">
-          <ScalarProperty Name="IdRecord" ColumnName="IdRecord" />
-          <ScalarProperty Name="idClient" ColumnName="idClient" />
-          <ScalarProperty Name="IdPersonnel" ColumnName="IdPersonnel" />
-          <ScalarProperty Name="IdServices" ColumnName="IdServices" />
-          <ScalarProperty Name="RecordTime" ColumnName="RecordTime" />
-          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
-          <ScalarProperty Name="Completed" ColumnName="Completed" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Services">
-      <EntityTypeMapping TypeName="BarberShopModel.Services">
-        <MappingFragment StoreEntitySet="Services">
-          <ScalarProperty Name="IdServices" ColumnName="IdServices" />
-          <ScalarProperty Name="NameService" ColumnName="NameService" />
-          <ScalarProperty Name="Cost" ColumnName="Cost" />
-          <ScalarProperty Name="IdStuff" ColumnName="IdStuff" />
-          <ScalarProperty Name="TimeServices" ColumnName="TimeServices" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Specialization">
-      <EntityTypeMapping TypeName="BarberShopModel.Specialization">
-        <MappingFragment StoreEntitySet="Specialization">
-          <ScalarProperty Name="IdSpecialization" ColumnName="IdSpecialization" />
-          <ScalarProperty Name="SpecializationName" ColumnName="SpecializationName" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Stuff">
-      <EntityTypeMapping TypeName="BarberShopModel.Stuff">
-        <MappingFragment StoreEntitySet="Stuff">
-          <ScalarProperty Name="idStuff" ColumnName="idStuff" />
-          <ScalarProperty Name="NameStuff" ColumnName="NameStuff" />
-          <ScalarProperty Name="Qty" ColumnName="Qty" />
-          <ScalarProperty Name="Cost" ColumnName="Cost" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="sysdiagrams">
-      <EntityTypeMapping TypeName="BarberShopModel.sysdiagrams">
-        <MappingFragment StoreEntitySet="sysdiagrams">
-          <ScalarProperty Name="name" ColumnName="name" />
-          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-          <ScalarProperty Name="version" ColumnName="version" />
-          <ScalarProperty Name="definition" ColumnName="definition" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="Хранилище BarberShopModel.sp_alterdiagram" />
     <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="Хранилище BarberShopModel.sp_creatediagram" />
     <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="Хранилище BarberShopModel.sp_dropdiagram" />
@@ -120,5 +25,100 @@
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="Хранилище BarberShopModel.sp_renamediagram" />
     <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="Хранилище BarberShopModel.sp_upgraddiagrams" />
+    <EntitySetMapping Name="Authorization">
+      <EntityTypeMapping TypeName="BarberShopModel.Authorization">
+        <MappingFragment StoreEntitySet="Authorization">
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="IdAuthorization" ColumnName="IdAuthorization" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Client">
+      <EntityTypeMapping TypeName="BarberShopModel.Client">
+        <MappingFragment StoreEntitySet="Client">
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="IdClient" ColumnName="IdClient" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Gender">
+      <EntityTypeMapping TypeName="BarberShopModel.Gender">
+        <MappingFragment StoreEntitySet="Gender">
+          <ScalarProperty Name="GenderName" ColumnName="GenderName" />
+          <ScalarProperty Name="IdGender" ColumnName="IdGender" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Personnel">
+      <EntityTypeMapping TypeName="BarberShopModel.Personnel">
+        <MappingFragment StoreEntitySet="Personnel">
+          <ScalarProperty Name="Experience" ColumnName="Experience" />
+          <ScalarProperty Name="IdSpecialization" ColumnName="IdSpecialization" />
+          <ScalarProperty Name="IdGender" ColumnName="IdGender" />
+          <ScalarProperty Name="Passport_Series" ColumnName="Passport&#xA;Series" />
+          <ScalarProperty Name="PassportNumber" ColumnName="PassportNumber" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="IdPersonnel" ColumnName="IdPersonnel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Record">
+      <EntityTypeMapping TypeName="BarberShopModel.Record">
+        <MappingFragment StoreEntitySet="Record">
+          <ScalarProperty Name="Completed" ColumnName="Completed" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="RecordTime" ColumnName="RecordTime" />
+          <ScalarProperty Name="IdServices" ColumnName="IdServices" />
+          <ScalarProperty Name="IdPersonnel" ColumnName="IdPersonnel" />
+          <ScalarProperty Name="idClient" ColumnName="idClient" />
+          <ScalarProperty Name="IdRecord" ColumnName="IdRecord" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Services">
+      <EntityTypeMapping TypeName="BarberShopModel.Services">
+        <MappingFragment StoreEntitySet="Services">
+          <ScalarProperty Name="TimeServices" ColumnName="TimeServices" />
+          <ScalarProperty Name="IdStuff" ColumnName="IdStuff" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+          <ScalarProperty Name="NameService" ColumnName="NameService" />
+          <ScalarProperty Name="IdServices" ColumnName="IdServices" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Specialization">
+      <EntityTypeMapping TypeName="BarberShopModel.Specialization">
+        <MappingFragment StoreEntitySet="Specialization">
+          <ScalarProperty Name="SpecializationName" ColumnName="SpecializationName" />
+          <ScalarProperty Name="IdSpecialization" ColumnName="IdSpecialization" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stuff">
+      <EntityTypeMapping TypeName="BarberShopModel.Stuff">
+        <MappingFragment StoreEntitySet="Stuff">
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="NameStuff" ColumnName="NameStuff" />
+          <ScalarProperty Name="idStuff" ColumnName="idStuff" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="BarberShopModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

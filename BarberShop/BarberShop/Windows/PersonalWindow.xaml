@@ -107,7 +107,7 @@
             RowBackground="Transparent"
             Foreground="White"
             IsReadOnly="True"
-            
+            KeyUp="AllPersonal_KeyUp"
             FontSize="25">
 
 

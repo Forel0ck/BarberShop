@@ -28,7 +28,6 @@ C:\Users\user\source\repos\BarberShop\BarberShop\obj\Debug\Windows\StuffWindow.b
 C:\Users\Forelock\Source\Repos\BarberShop\BarberShop\BarberShop\bin\Debug\BarberShop.exe.config
 C:\Users\Forelock\Source\Repos\BarberShop\BarberShop\BarberShop\bin\Debug\BarberShop.exe
 C:\Users\Forelock\Source\Repos\BarberShop\BarberShop\BarberShop\bin\Debug\BarberShop.pdb
-C:\Users\Forelock\Source\Repos\BarberShop\BarberShop\BarberShop\obj\Debug\BarberShop.csproj.AssemblyReference.cache
 C:\Users\Forelock\Source\Repos\BarberShop\BarberShop\BarberShop\obj\Debug\BarberShop.csproj.SuggestedBindingRedirects.cache
 C:\Users\Forelock\Source\Repos\BarberShop\BarberShop\BarberShop\obj\Debug\Windows\AuthWindow.g.cs
 C:\Users\Forelock\Source\Repos\BarberShop\BarberShop\BarberShop\obj\Debug\Windows\MainWindow.g.cs
@@ -107,3 +106,16 @@ C:\Users\user\Source\Repos\BarberShop\BarberShop\BarberShop\bin\Debug\MaterialDe
 C:\Users\user\Source\Repos\BarberShop\BarberShop\BarberShop\bin\Debug\MaterialDesignThemes.Wpf.xml
 C:\Users\user\Source\Repos\BarberShop\BarberShop\BarberShop\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
 C:\Users\user\Source\Repos\BarberShop\BarberShop\BarberShop\obj\Debug\BarberShop.csprojAssemblyReference.cache
+C:\Users\Forelock\Source\Repos\BarberShop\BarberShop\BarberShop\bin\Debug\MaterialDesignColors.dll
+C:\Users\Forelock\Source\Repos\BarberShop\BarberShop\BarberShop\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Forelock\Source\Repos\BarberShop\BarberShop\BarberShop\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Forelock\Source\Repos\BarberShop\BarberShop\BarberShop\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Forelock\Source\Repos\BarberShop\BarberShop\BarberShop\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Forelock\Source\Repos\BarberShop\BarberShop\BarberShop\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\Forelock\Source\Repos\BarberShop\BarberShop\BarberShop\obj\Debug\Windows\AddClientWindow.g.cs
+C:\Users\Forelock\Source\Repos\BarberShop\BarberShop\BarberShop\obj\Debug\Windows\AddWindow.g.cs
+C:\Users\Forelock\Source\Repos\BarberShop\BarberShop\BarberShop\obj\Debug\Windows\ClientWindow.g.cs
+C:\Users\Forelock\Source\Repos\BarberShop\BarberShop\BarberShop\obj\Debug\App.baml
+C:\Users\Forelock\Source\Repos\BarberShop\BarberShop\BarberShop\obj\Debug\Windows\AddClientWindow.baml
+C:\Users\Forelock\Source\Repos\BarberShop\BarberShop\BarberShop\obj\Debug\Windows\AddWindow.baml
+C:\Users\Forelock\Source\Repos\BarberShop\BarberShop\BarberShop\obj\Debug\Windows\ClientWindow.baml

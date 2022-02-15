@@ -31,10 +31,7 @@ namespace BarberShop.EF
         public string Experience { get; set; }
 
         public string INFO { get => $"{FirstName} {LastName} {Phone} {PassportNumber} {Passport_Series} {Experience}"; }
-
-        public string DOPE { get => $"{FirstName} {LastName}"; }
-
-
+    
         public virtual Gender Gender { get; set; }
         public virtual Specialization Specialization { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
