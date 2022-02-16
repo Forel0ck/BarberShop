@@ -53,7 +53,7 @@ namespace BarberShop.Windows
             Phone.Text = personnel.Phone;
             NumberPas.Text = personnel.PassportNumber;
             SeriaPas.Text = personnel.Passport_Series;
-            Experience.Text = personnel.Experience;
+            Experience.Text = personnel.Experience.ToString();
 
             Add.Visibility = Visibility.Hidden;
             Add.IsEnabled = false;
@@ -120,7 +120,7 @@ namespace BarberShop.Windows
             }
             if (!string.IsNullOrWhiteSpace(Experience.Text))
             {
-                personnel.Experience = Experience.Text;
+                personnel.Experience =  Convert.ToInt32(Experience.Text);
             }
             else
             {
@@ -303,7 +303,7 @@ namespace BarberShop.Windows
             pers.Phone = Phone.Text.Trim();
             pers.PassportNumber = NumberPas.Text.Trim();
             pers.Passport_Series = SeriaPas.Text.Trim();
-            pers.Experience = Experience.Text.Trim();
+            pers.Experience = Convert.ToInt32(Experience.Text.Trim());
             pers.IdGender = Gender.SelectedIndex + 1;
             pers.IdSpecialization = Pecialization.SelectedIndex + 1;
 
@@ -355,7 +355,7 @@ namespace BarberShop.Windows
             }
             if (!string.IsNullOrWhiteSpace(Experience.Text))
             {
-                personnel.Experience = Experience.Text;
+                personnel.Experience = Convert.ToInt32(Experience.Text);
             }
             else
             {

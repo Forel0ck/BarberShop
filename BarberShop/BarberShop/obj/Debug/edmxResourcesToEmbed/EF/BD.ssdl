@@ -36,7 +36,7 @@
     <Property Name="Passport&#xA;Series" Type="char" MaxLength="4" Nullable="false" />
     <Property Name="IdGender" Type="int" Nullable="false" />
     <Property Name="IdSpecialization" Type="int" Nullable="false" />
-    <Property Name="Experience" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="Experience" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Record">
     <Key>
