@@ -13,13 +13,13 @@
         <StackPanel>
             <Button
                 x:Name="Close"
-                Height="30"
-                Width="30"
+                Height="15"
+                Width="15"
                 VerticalAlignment="Center"
                 HorizontalAlignment="Right"
                 Margin="10" Click="Close_Click" 
                 BorderBrush="{x:Null}" 
-                Foreground="{x:Null}"  
+                Foreground="{x:Null}" Style="{DynamicResource MyButtonStyle}"  
                 >
                 <Button.Background>
                     <ImageBrush ImageSource="/Images/cross.png"/>
@@ -30,7 +30,7 @@
                 Height="50"
                 HorizontalAlignment="Center"
                 FontSize="30"
-                Margin="15" Foreground="White"
+                Margin="35" Foreground="White"
                 />
             <TextBlock
                 Text="Логин"

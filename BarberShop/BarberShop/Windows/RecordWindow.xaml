@@ -26,30 +26,35 @@
             Grid.RowSpan="10"
             Grid.ColumnSpan="2"
             Stretch="Fill"
-            />
+            >
+            <Image.Effect>
+                <BlurEffect Radius="15"/>
+            </Image.Effect>
+        </Image>
         <TextBlock
+            Width="300"
             Grid.Row="0"
             Grid.ColumnSpan="2"
-                Text="Запись"
-                FontSize="70"
-                TextAlignment="Center"
-                VerticalAlignment="Center"
-                Margin="10" 
-                Foreground="White"
+            Text="Запись"
+            FontSize="70"
+            TextAlignment="Center"
+            VerticalAlignment="Center"
+            Margin="10" 
+            Foreground="White"
                 />
         <Button
             Grid.Row="0"
             Grid.Column="2"
-                x:Name="Close"
-                Height="50"
-                Width="50"
-                VerticalAlignment="Top"
-                HorizontalAlignment="Right"
-                Margin="20"
-                Click="Close_Click"
-                BorderBrush="{x:Null}" 
-                Foreground="{x:Null}"  
-                Style="{StaticResource MyButtonStyle}"
+            x:Name="Close"
+            Height="50"
+            Width="50"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Right"
+            Margin="20"
+            Click="Close_Click"
+            BorderBrush="{x:Null}" 
+            Foreground="{x:Null}"  
+            Style="{StaticResource MyButtonStyle}" RenderTransformOrigin="0.504,0.5"
                 >
             <Button.Background>
                 <ImageBrush ImageSource="/Images/cross.png"/>
@@ -106,7 +111,7 @@
             Height="70"
             FontSize="40"
             HorizontalAlignment="Left"
-            VerticalContentAlignment="Center"
+            VerticalContentAlignment="Center" SelectionChanged="Client_Sel vectionChanged"
             >
             <ComboBox.OpacityMask>
                 <SolidColorBrush Color="Black" Opacity="0.5"/>
@@ -121,7 +126,7 @@
             Height="70"
             FontSize="40"
             HorizontalAlignment="Left"
-            VerticalContentAlignment="Center" 
+            VerticalContentAlignment="Center" SelectionChanged="Personel_SelectionChanged" 
             >
             <ComboBox.OpacityMask>
                 <SolidColorBrush Color="Black" Opacity="0.5"/>
@@ -136,7 +141,7 @@
             Height="70"
             FontSize="40"
             HorizontalAlignment="Left"
-            VerticalContentAlignment="Center"
+            VerticalContentAlignment="Center" SelectionChanged="Service_SelectionChanged"
             >
             <ComboBox.OpacityMask>
                 <SolidColorBrush Color="Black" Opacity="0.5"/>

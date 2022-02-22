@@ -133,7 +133,6 @@ C:\Users\IMac9\Source\Repos\BarberShop\BarberShop\BarberShop\bin\Debug\MaterialD
 C:\Users\IMac9\Source\Repos\BarberShop\BarberShop\BarberShop\bin\Debug\MaterialDesignThemes.Wpf.xml
 C:\Users\IMac9\Source\Repos\BarberShop\BarberShop\BarberShop\bin\Debug\ru\EntityFramework.resources.dll
 C:\Users\IMac9\Source\Repos\BarberShop\BarberShop\BarberShop\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
-C:\Users\IMac9\Source\Repos\BarberShop\BarberShop\BarberShop\obj\Debug\BarberShop.csproj.AssemblyReference.cache
 C:\Users\IMac9\Source\Repos\BarberShop\BarberShop\BarberShop\obj\Debug\Windows\AddClientWindow.g.cs
 C:\Users\IMac9\Source\Repos\BarberShop\BarberShop\BarberShop\obj\Debug\Windows\AddWindow.g.cs
 C:\Users\IMac9\Source\Repos\BarberShop\BarberShop\BarberShop\obj\Debug\Windows\AuthWindow.g.cs
@@ -165,3 +164,5 @@ C:\Users\IMac9\Source\Repos\BarberShop\BarberShop\BarberShop\obj\Debug\BarberSho
 C:\Users\IMac9\Source\Repos\BarberShop\BarberShop\BarberShop\obj\Debug\BarberShop.csproj.CoreCompileInputs.cache
 C:\Users\IMac9\Source\Repos\BarberShop\BarberShop\BarberShop\obj\Debug\BarberShop.exe
 C:\Users\IMac9\Source\Repos\BarberShop\BarberShop\BarberShop\obj\Debug\BarberShop.pdb
+C:\Users\IMac9\source\repos\BarberShop\BarberShop\BarberShop\obj\Debug\BarberShop.csproj.CopyComplete
+C:\Users\IMac9\source\repos\BarberShop\BarberShop\BarberShop\obj\Debug\BarberShop.csproj.AssemblyReference.cache

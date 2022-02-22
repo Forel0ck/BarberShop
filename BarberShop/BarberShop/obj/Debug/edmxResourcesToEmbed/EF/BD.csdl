@@ -92,6 +92,7 @@
     <Property Name="FirstName" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
     <Property Name="LastName" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
     <Property Name="Phone" Type="String" Nullable="false" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="IsDeleted" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Record" Relationship="BarberShopModel.FK_Record_Client" FromRole="Client" ToRole="Record" />
   </EntityType>
   <EntityType Name="Gender">
@@ -115,6 +116,7 @@
     <Property Name="IdGender" Type="Int32" Nullable="false" />
     <Property Name="IdSpecialization" Type="Int32" Nullable="false" />
     <Property Name="Experience" Type="Int32" Nullable="false" />
+    <Property Name="IsDeleted" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Gender" Relationship="BarberShopModel.FK_Personnel_Gender" FromRole="Personnel" ToRole="Gender" />
     <NavigationProperty Name="Specialization" Relationship="BarberShopModel.FK_Personnel_Specialization" FromRole="Personnel" ToRole="Specialization" />
     <NavigationProperty Name="Record" Relationship="BarberShopModel.FK_Record_Personnel" FromRole="Personnel" ToRole="Record" />
@@ -130,6 +132,7 @@
     <Property Name="RecordTime" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="EndTime" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="Completed" Type="Boolean" Nullable="false" />
+    <Property Name="IsDeleted" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Client" Relationship="BarberShopModel.FK_Record_Client" FromRole="Record" ToRole="Client" />
     <NavigationProperty Name="Personnel" Relationship="BarberShopModel.FK_Record_Personnel" FromRole="Record" ToRole="Personnel" />
     <NavigationProperty Name="Services" Relationship="BarberShopModel.FK_Record_Services" FromRole="Record" ToRole="Services" />
@@ -175,7 +178,9 @@
     <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
   <Association Name="FK_Record_Client">
-    <End Type="BarberShopModel.Client" Role="Client" Multiplicity="1" />
+    <End Type="BarberShopModel.Client" Role="Client" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Type="BarberShopModel.Record" Role="Record" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Client">
@@ -211,7 +216,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Record_Personnel">
-    <End Type="BarberShopModel.Personnel" Role="Personnel" Multiplicity="1" />
+    <End Type="BarberShopModel.Personnel" Role="Personnel" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Type="BarberShopModel.Record" Role="Record" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Personnel">
@@ -223,7 +230,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Record_Services">
-    <End Type="BarberShopModel.Services" Role="Services" Multiplicity="1" />
+    <End Type="BarberShopModel.Services" Role="Services" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Type="BarberShopModel.Record" Role="Record" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Services">

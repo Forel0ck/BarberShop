@@ -130,8 +130,14 @@ namespace BarberShop.Windows
                 var resMass = MessageBox.Show($"Вы хотите удалить пользователя {personnel.LastName}  {personnel.FirstName}", "Предупреждение", MessageBoxButton.YesNo);
                 if (resMass == MessageBoxResult.Yes)
                 {
+                    var entity = ClassEntities.context.Personnel.Find((AllPersonal.SelectedItem as Personnel).IdPersonnel);
+                    entity.IsDeleted = 1;
+                    var entry = ClassEntities.context.Entry(entity);
+                    entry.State = System.Data.Entity.EntityState.Modified;
+
                     context.Personnel.Remove(context.Personnel.Where(i => i.IdPersonnel == personnel.IdPersonnel).FirstOrDefault());
                     context.SaveChanges();
+                    AllPersonal.ItemsSource = context.Personnel.Where(i => i.IsDeleted != 1).ToList();
                     AllPersonal.ItemsSource = context.Personnel.ToList();
                 }
                 else

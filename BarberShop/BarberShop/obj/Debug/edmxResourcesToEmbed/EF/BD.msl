@@ -37,6 +37,7 @@
     <EntitySetMapping Name="Client">
       <EntityTypeMapping TypeName="BarberShopModel.Client">
         <MappingFragment StoreEntitySet="Client">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
           <ScalarProperty Name="Phone" ColumnName="Phone" />
           <ScalarProperty Name="LastName" ColumnName="LastName" />
           <ScalarProperty Name="FirstName" ColumnName="FirstName" />
@@ -55,6 +56,7 @@
     <EntitySetMapping Name="Personnel">
       <EntityTypeMapping TypeName="BarberShopModel.Personnel">
         <MappingFragment StoreEntitySet="Personnel">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
           <ScalarProperty Name="Experience" ColumnName="Experience" />
           <ScalarProperty Name="IdSpecialization" ColumnName="IdSpecialization" />
           <ScalarProperty Name="IdGender" ColumnName="IdGender" />
@@ -70,6 +72,7 @@
     <EntitySetMapping Name="Record">
       <EntityTypeMapping TypeName="BarberShopModel.Record">
         <MappingFragment StoreEntitySet="Record">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
           <ScalarProperty Name="Completed" ColumnName="Completed" />
           <ScalarProperty Name="EndTime" ColumnName="EndTime" />
           <ScalarProperty Name="RecordTime" ColumnName="RecordTime" />

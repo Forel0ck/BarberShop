@@ -25,7 +25,11 @@
             Grid.RowSpan="10"
             Grid.ColumnSpan="2"
             Stretch="Fill"
-            />
+            >
+            <Image.Effect>
+                <BlurEffect Radius="15"/>
+            </Image.Effect>
+        </Image>
         <TextBlock
             Grid.Row="0"
             Grid.ColumnSpan="2"

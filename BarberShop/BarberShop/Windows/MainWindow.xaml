@@ -30,34 +30,37 @@
             </Image.Effect>
         </Image>
         <Button
-                x:Name="Close"
-                Height="50"
-                Width="50"
-                VerticalAlignment="Center"
-                HorizontalAlignment="Right"
-                Margin="20" Click="Close_Click" 
-                BorderBrush="{x:Null}" 
-                Foreground="{x:Null}" 
-                Grid.Column="1"
+            x:Name="Close"
+            Height="50"
+            Width="50"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Right"
+            Margin="20" 
+            Click="Close_Click" 
+            BorderBrush="{x:Null}" 
+            Foreground="{x:Null}" 
+            Grid.Column="1" Style="{DynamicResource MyButtonStyle}"
                 >
-                <Button.Background>
-                    <ImageBrush ImageSource="/Images/cross.png"/>
-                </Button.Background>
-            </Button>
-            <TextBlock
-                Text="Barbershop"
-                FontSize="100"
-                Height="150"
-                TextAlignment="Center"
-                VerticalAlignment="Center" 
-                Foreground="White" 
-                FontFamily="Franklin Gothic Medium" 
-                FontWeight="Normal"
-                FontStyle="Normal"
-                Grid.ColumnSpan="2"
-                Grid.Row="0"
+            <Button.Background>
+                <ImageBrush ImageSource="/Images/cross.png"/>
+            </Button.Background>
+        </Button>
+        <TextBlock
+            Text="Barbershop"
+            FontSize="100"
+            Height="150"
+            Width="500"
+            TextAlignment="Center"
+            VerticalAlignment="Center" 
+            Foreground="White" 
+            FontFamily="Franklin Gothic Medium" 
+            FontWeight="Normal"
+            FontStyle="Normal"
+            Grid.ColumnSpan="2"
+            Grid.Row="0"
+            
                 />
-            <Button
+        <Button
                 x:Name="Services"
                 Content="Католог услуг"
                 FontSize="50"
@@ -72,9 +75,9 @@
                 Grid.Row="1"
                 HorizontalAlignment="Center"
                 />
-            <Button
+        <Button
                 x:Name="Record"
-                Content="Запись на услуг"
+                Content="Запись на услугу"
                 FontSize="50"
                 Height="100"
                 Margin="20" 
@@ -87,7 +90,7 @@
                 Grid.Row="1"
                 HorizontalAlignment="Center"
                 />
-            <Button
+        <Button
                 x:Name="Personal"
                 Content="Персонал"
                 FontSize="50"
@@ -102,7 +105,7 @@
                 Grid.Row="2"
                 HorizontalAlignment="Center"
                 />
-            <Button
+        <Button
                 x:Name="Client"
                 Content="Клиенты"
                 FontSize="50"
@@ -117,7 +120,7 @@
                 Grid.Row="2"
                 HorizontalAlignment="Center"
                 />
-            <Button
+        <Button
                 x:Name="Stuff"
                 Content="Расходники"
                 FontSize="50"
@@ -132,7 +135,7 @@
                 Grid.Row="3"
                 HorizontalAlignment="Center"
                 />
-            <Button
+        <Button
                 x:Name="Report"
                 Content="Отчет"
                 FontSize="50"
@@ -155,12 +158,15 @@
                 Margin="20" 
                 Click="Exit_Click"
                 Background="{x:Null}" 
-                BorderBrush="{x:Null}" 
-                Foreground="White"
+                BorderBrush="{x:Null}"
                 Style="{StaticResource MyButtonStyle}"
                 Grid.ColumnSpan="2"
                 Grid.Row="4"
                 HorizontalAlignment="Center"
-                />
+                >
+            <Button.Foreground>
+                <SolidColorBrush Color="#FF7D1F21"/>
+            </Button.Foreground>
+        </Button>
     </Grid>
 </Window>

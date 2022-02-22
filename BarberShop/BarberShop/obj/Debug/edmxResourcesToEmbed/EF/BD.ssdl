@@ -16,6 +16,7 @@
     <Property Name="FirstName" Type="nvarchar" MaxLength="150" Nullable="false" />
     <Property Name="LastName" Type="nvarchar" MaxLength="150" Nullable="false" />
     <Property Name="Phone" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="IsDeleted" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Gender">
     <Key>
@@ -37,6 +38,7 @@
     <Property Name="IdGender" Type="int" Nullable="false" />
     <Property Name="IdSpecialization" Type="int" Nullable="false" />
     <Property Name="Experience" Type="int" Nullable="false" />
+    <Property Name="IsDeleted" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Record">
     <Key>
@@ -49,6 +51,7 @@
     <Property Name="RecordTime" Type="datetime" Nullable="false" />
     <Property Name="EndTime" Type="datetime" Nullable="false" />
     <Property Name="Completed" Type="bit" Nullable="false" />
+    <Property Name="IsDeleted" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Services">
     <Key>
@@ -111,7 +114,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Record_Client">
-    <End Role="Client" Type="Self.Client" Multiplicity="1" />
+    <End Role="Client" Type="Self.Client" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Record" Type="Self.Record" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Client">
@@ -123,7 +128,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Record_Personnel">
-    <End Role="Personnel" Type="Self.Personnel" Multiplicity="1" />
+    <End Role="Personnel" Type="Self.Personnel" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Record" Type="Self.Record" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Personnel">
@@ -135,7 +142,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Record_Services">
-    <End Role="Services" Type="Self.Services" Multiplicity="1" />
+    <End Role="Services" Type="Self.Services" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Record" Type="Self.Record" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Services">
