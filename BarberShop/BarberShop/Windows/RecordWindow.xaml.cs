@@ -16,6 +16,7 @@ using static BarberShop.ClassEntities;
 
 namespace BarberShop.Windows
 {
+    ///
     /// <summary>
     /// Логика взаимодействия для RecordWindow.xaml
     /// </summary>
