@@ -56,6 +56,7 @@
     <EntitySetMapping Name="Personnel">
       <EntityTypeMapping TypeName="BarberShopModel.Personnel">
         <MappingFragment StoreEntitySet="Personnel">
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
           <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
           <ScalarProperty Name="Experience" ColumnName="Experience" />
           <ScalarProperty Name="IdSpecialization" ColumnName="IdSpecialization" />

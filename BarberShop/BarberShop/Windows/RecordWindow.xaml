@@ -109,9 +109,10 @@
             Margin="10 0 0 0"
             Width="350"
             Height="70"
-            FontSize="40"
+            FontSize="5"
             HorizontalAlignment="Left"
-            VerticalContentAlignment="Center" SelectionChanged="Client_Sel vectionChanged"
+            VerticalContentAlignment="Center" 
+            SelectionChanged="Client_SelectionChanged"
             >
             <ComboBox.OpacityMask>
                 <SolidColorBrush Color="Black" Opacity="0.5"/>
@@ -126,7 +127,8 @@
             Height="70"
             FontSize="40"
             HorizontalAlignment="Left"
-            VerticalContentAlignment="Center" SelectionChanged="Personel_SelectionChanged" 
+            VerticalContentAlignment="Center" 
+            SelectionChanged="Personel_SelectionChanged" 
             >
             <ComboBox.OpacityMask>
                 <SolidColorBrush Color="Black" Opacity="0.5"/>

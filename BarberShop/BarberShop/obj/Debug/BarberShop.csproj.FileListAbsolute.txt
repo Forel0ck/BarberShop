@@ -164,5 +164,6 @@ C:\Users\IMac9\Source\Repos\BarberShop\BarberShop\BarberShop\obj\Debug\BarberSho
 C:\Users\IMac9\Source\Repos\BarberShop\BarberShop\BarberShop\obj\Debug\BarberShop.csproj.CoreCompileInputs.cache
 C:\Users\IMac9\Source\Repos\BarberShop\BarberShop\BarberShop\obj\Debug\BarberShop.exe
 C:\Users\IMac9\Source\Repos\BarberShop\BarberShop\BarberShop\obj\Debug\BarberShop.pdb
-C:\Users\IMac9\source\repos\BarberShop\BarberShop\BarberShop\obj\Debug\BarberShop.csproj.CopyComplete
+C:\Users\IMac9\source\repos\BarberShop\BarberShop\BarberShop\obj\Debug\Windows\Window1.g.cs
+C:\Users\IMac9\source\repos\BarberShop\BarberShop\BarberShop\obj\Debug\Windows\Window1.baml
 C:\Users\IMac9\source\repos\BarberShop\BarberShop\BarberShop\obj\Debug\BarberShop.csproj.AssemblyReference.cache

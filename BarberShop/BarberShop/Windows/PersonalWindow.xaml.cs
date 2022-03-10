@@ -37,6 +37,7 @@ namespace BarberShop.Windows
         private void Filter()
         {
             personnels = ClassEntities.context.Personnel.ToList();
+
             personnels = personnels.Where(i => i.INFO.Contains(Search.Text)).ToList();
             
 

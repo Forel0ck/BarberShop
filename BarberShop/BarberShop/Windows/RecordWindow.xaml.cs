@@ -25,18 +25,6 @@ namespace BarberShop.Windows
         public RecordWindow()
         {
             InitializeComponent();
-
-            Client.ItemsSource = context.Client.ToList();
-            Client.DisplayMemberPath = "DATA";
-            Client.SelectedIndex = 0;
-
-            Personel.ItemsSource = context.Personnel.ToList();
-            Personel.DisplayMemberPath = "DOPE";
-            Personel.SelectedIndex = 0;
-
-            Service.ItemsSource = context.Services.ToList();
-            Service.DisplayMemberPath = "NameService";
-            Service.SelectedIndex = 0;
         }
         private void Close_Click(object sender, RoutedEventArgs e)
         {
@@ -62,6 +50,31 @@ namespace BarberShop.Windows
             MessageBox.Show("Запись добавлен");
             ClassEntities.context.Record.Add(record);
             ClassEntities.context.SaveChanges();
+        }
+
+        private void Personel_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+            Personel.ItemsSource = context.Personnel.ToList();
+            Personel.DisplayMemberPath = "FirstName";
+            Personel.SelectedIndex = 0;
+
+        }
+
+        private void Client_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+            Client.ItemsSource = context.Client.ToList();
+            Client.DisplayMemberPath = "FIO";
+            Client.SelectedIndex = 0;
+        }
+
+        private void Service_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+            Service.ItemsSource = context.Services.ToList();
+            Service.DisplayMemberPath = "NameService";
+            Service.SelectedIndex = 0;
         }
     }
 }

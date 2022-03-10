@@ -39,6 +39,7 @@
     <Property Name="IdSpecialization" Type="int" Nullable="false" />
     <Property Name="Experience" Type="int" Nullable="false" />
     <Property Name="IsDeleted" Type="int" Nullable="false" />
+    <Property Name="Photo" Type="varbinary(max)" />
   </EntityType>
   <EntityType Name="Record">
     <Key>
@@ -128,9 +129,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Record_Personnel">
-    <End Role="Personnel" Type="Self.Personnel" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
+    <End Role="Personnel" Type="Self.Personnel" Multiplicity="1" />
     <End Role="Record" Type="Self.Record" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Personnel">

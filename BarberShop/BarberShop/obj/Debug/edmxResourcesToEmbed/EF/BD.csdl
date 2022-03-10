@@ -117,6 +117,7 @@
     <Property Name="IdSpecialization" Type="Int32" Nullable="false" />
     <Property Name="Experience" Type="Int32" Nullable="false" />
     <Property Name="IsDeleted" Type="Int32" Nullable="false" />
+    <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" />
     <NavigationProperty Name="Gender" Relationship="BarberShopModel.FK_Personnel_Gender" FromRole="Personnel" ToRole="Gender" />
     <NavigationProperty Name="Specialization" Relationship="BarberShopModel.FK_Personnel_Specialization" FromRole="Personnel" ToRole="Specialization" />
     <NavigationProperty Name="Record" Relationship="BarberShopModel.FK_Record_Personnel" FromRole="Personnel" ToRole="Record" />
@@ -216,9 +217,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Record_Personnel">
-    <End Type="BarberShopModel.Personnel" Role="Personnel" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
+    <End Type="BarberShopModel.Personnel" Role="Personnel" Multiplicity="1" />
     <End Type="BarberShopModel.Record" Role="Record" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Personnel">

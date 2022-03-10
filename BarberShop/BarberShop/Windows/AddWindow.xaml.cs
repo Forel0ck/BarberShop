@@ -1,6 +1,8 @@
 ﻿using BarberShop.EF;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -22,6 +24,8 @@ namespace BarberShop.Windows
     /// </summary>
     public partial class AddWindow : Window
     {
+        string pathPhoto = null;
+
         public AddWindow()
         {
             InitializeComponent();
@@ -40,6 +44,22 @@ namespace BarberShop.Windows
         public AddWindow(Personnel personnel)
         {
             InitializeComponent();
+
+
+            if (personnel.Photo != null)
+            {
+                using (MemoryStream stream = new MemoryStream(personnel.Photo))
+                {
+                    BitmapImage bitmapImage = new BitmapImage();
+                    bitmapImage.BeginInit();
+                    bitmapImage.CacheOption = BitmapCacheOption.OnLoad;
+                    bitmapImage.CreateOptions = BitmapCreateOptions.PreservePixelFormat;
+                    bitmapImage.StreamSource = stream;
+                    bitmapImage.EndInit();
+                    ImagePerson.Source = bitmapImage;
+                }
+            }
+
             Gender.ItemsSource = context.Gender.ToList();
             Gender.DisplayMemberPath = "GenderName";
             Gender.SelectedIndex = personnel.IdGender - 1;
@@ -398,6 +418,17 @@ namespace BarberShop.Windows
                 PersonalWindow personalWindow = new PersonalWindow();
                 personalWindow.ShowDialog();
                 this.Close();
+            }
+        }
+
+        private void ChoopePhoto_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == true)
+            {
+                ImagePerson.Source = new BitmapImage(new Uri(openFileDialog.FileName));
+
+                pathPhoto = openFileDialog.FileName;
             }
         }
     }
