@@ -65,7 +65,7 @@ namespace BarberShop.Windows
         {
 
             Client.ItemsSource = context.Client.ToList();
-            Client.DisplayMemberPath = "FIO";
+            Client.DisplayMemberPath = "FirstName " + " LastName";
             Client.SelectedIndex = 0;
         }
 

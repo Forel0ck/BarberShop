@@ -99,9 +99,105 @@
                 Foreground="White"    
                 />
         </WrapPanel>
+        <ListView
+            x:Name="AllClient"
+            Grid.Row="2"
+            Grid.ColumnSpan="3"
+            Background="Transparent"
+            Foreground="White"
+            KeyUp="AllClient_KeyUp_1"
+            FontSize="25"
+            ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+            >
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel/>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border 
+                BorderBrush="DarkGray"
+                BorderThickness="2"
+                CornerRadius="10"
+                Width="720"
+                Height="100"
+                Margin="10">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                        
+                            <!-- 1 -->
+                            <TextBlock Text="Фамилия:"
+                           Grid.Column="0"
+                           Grid.Row="0"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Right"
+                           Margin="0 0 7 0"
+                           FontSize="20"/>
+
+                            <TextBlock Text="Имя:"
+                           Grid.Column="0"
+                           Grid.Row="1"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Right"
+                           Margin="0 0 7 0"
+                           FontSize="20"/>
+
+                            <TextBlock Text="Телефон:"
+                           Grid.Column="0"
+                           Grid.Row="2"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Right"
+                           Margin="0 0 7 0"
+                           FontSize="20"/>
+
+                            <!-- 2 -->
+
+                            <TextBlock Text="{Binding Path=LastName}"
+                           Grid.Column="1"
+                           Grid.Row="0"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Left"
+                           Margin="0 0 10 0"
+                           FontSize="20"/>
+
+                            <TextBlock Text="{Binding Path=FirstName}"
+                           Grid.Column="1"
+                           Grid.Row="1"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Left"
+                           Margin="0 0 10 0"
+                           FontSize="20"/>
+
+                            <TextBlock Text="{Binding Path=Phone}"
+                           Grid.Column="1"
+                           Grid.Row="2"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Left"
+                           Margin="0 0 0 0"
+                           FontSize="20"/>
 
 
-        <DataGrid
+                          
+                        </Grid>
+
+                    </Border>
+
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+
+        <!--<DataGrid
             x:Name="AllClient"
             Grid.Row="2"
             Grid.ColumnSpan="3"
@@ -125,7 +221,14 @@
                     <Setter Property="Background" Value="#FF324AB2" />
                 </Style>
             </DataGrid.Resources>
-        </DataGrid>
+        </DataGrid>-->
+
+            <ListView.Resources>
+                <Style BasedOn="{StaticResource {x:Type DataGridColumnHeader}}" TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="#324AB2" />
+                </Style>
+            </ListView.Resources>
+        </ListView>
         <Button
             Grid.Row="3"
             Grid.Column="0"

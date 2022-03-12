@@ -40,11 +40,13 @@
         <Border
             Grid.Column="1"
             Grid.Row="1"
-            Grid.RowSpan="3"
+            Grid.RowSpan="4"
             HorizontalAlignment="Right"
-            Margin="0 0 150 0"
+            Margin="0 0 130 0"
             BorderThickness="2"
             BorderBrush="LightGray"
+            Height="370"
+            Width="370"
             CornerRadius="10"
             >
             <Image x:Name="ImagePerson" Source="/Images\userDef2.png"/>

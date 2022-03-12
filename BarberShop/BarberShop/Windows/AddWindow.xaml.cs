@@ -147,6 +147,10 @@ namespace BarberShop.Windows
                 MessageBox.Show("Вы не ввели стаж");
                 return;
             }
+            if (pathPhoto != null)
+            {
+                personnel.Photo = File.ReadAllBytes(pathPhoto);
+            }
 
 
             var chekPhone = Phone.Text;

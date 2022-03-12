@@ -171,5 +171,32 @@ namespace BarberShop.Windows
             Filter();
         }
 
+        private void AllClient_KeyUp_1(object sender, KeyEventArgs e)
+        {
+
+            if (e.Key == Key.Delete || e.Key == Key.Back)
+            {
+                if (AllClient.SelectedItem is Client client)
+                {
+                    var resMass = MessageBox.Show($"Вы хотите удалить пользователя {client.LastName}  {client.FirstName}", "Предупреждение", MessageBoxButton.YesNo);
+                    if (resMass == MessageBoxResult.Yes)
+                    {
+                        context.Client.Remove(context.Client.Where(i => i.IdClient == client.IdClient).FirstOrDefault());
+                        context.SaveChanges();
+                        AllClient.ItemsSource = context.Personnel.ToList();
+                    }
+                    else
+                    {
+                        return;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show($"Вы не выбрали пользователя", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+            Filter();
+
+        }
     }
 }
