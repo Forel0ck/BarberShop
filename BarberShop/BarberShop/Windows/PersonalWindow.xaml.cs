@@ -34,7 +34,7 @@ namespace BarberShop.Windows
             Sort.SelectedIndex = 0;
             Filter();
         }
-        private void Filter()
+        private void Filter()  
         {
             personnels = ClassEntities.context.Personnel.ToList();
 
