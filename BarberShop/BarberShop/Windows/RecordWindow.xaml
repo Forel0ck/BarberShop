@@ -19,6 +19,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="1.5*"/>
         </Grid.RowDefinitions>
         <Image
@@ -54,7 +55,8 @@
             Click="Close_Click"
             BorderBrush="{x:Null}" 
             Foreground="{x:Null}"  
-            Style="{StaticResource MyButtonStyle}" RenderTransformOrigin="0.504,0.5"
+            Style="{StaticResource MyButtonStyle}" 
+            RenderTransformOrigin="0.504,0.5"
                 >
             <Button.Background>
                 <ImageBrush ImageSource="/Images/cross.png"/>
@@ -94,12 +96,42 @@
         <TextBlock
             Grid.Row="4"
             Grid.Column="0"
-            Text="Дата и вермя"
+            Text="Дата"
             FontSize="60"
             Foreground="White"
             HorizontalAlignment="Right"
             VerticalAlignment="Center"
             Margin="0 0 10 0"
+            />
+        <DatePicker
+            Grid.Column="1"
+            Grid.Row="4"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            Margin="5"
+            FontSize="40" 
+            BorderBrush="{x:Null}" Background="{x:Null}"
+            
+            />
+        <TextBlock
+            Grid.Row="5"
+            Grid.Column="0"
+            Text="Время"
+            FontSize="60"
+            Foreground="White"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Center"
+            Margin="0 0 10 0"
+            />
+        <TextBox
+            Grid.Row="5"
+            Grid.Column="1"
+            FontSize="40"
+            Width="300"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            Margin="10 0 0 0" 
+            Background="#FF324AB2" BorderBrush="White" Foreground="White"  
             />
 
         <ComboBox
@@ -110,17 +142,17 @@
             Width="350"
             Height="70"
             FontSize="40"
+            DisplayMemberPath="FIO"
             Foreground="White"
             HorizontalAlignment="Left"
             VerticalContentAlignment="Center" 
-            SelectionChanged="Client_SelectionChanged"
             >
             <ComboBox.OpacityMask>
                 <SolidColorBrush Color="Black" Opacity="0.5"/>
             </ComboBox.OpacityMask>
         </ComboBox>
         <ComboBox
-            x:Name="Personel"
+            x:Name="cmbPersonel"
             Grid.Column="1"
             Grid.Row="2"
             Margin="10 0 0 0"
@@ -130,7 +162,6 @@
             Foreground="White"
             HorizontalAlignment="Left"
             VerticalContentAlignment="Center" 
-            SelectionChanged="Personel_SelectionChanged" 
             >
             <ComboBox.OpacityMask>
                 <SolidColorBrush Color="Black" Opacity="0.5"/>
@@ -146,7 +177,7 @@
             FontSize="40"
             Foreground="White"
             HorizontalAlignment="Left"
-            VerticalContentAlignment="Center" SelectionChanged="Service_SelectionChanged"
+            VerticalContentAlignment="Center" 
             >
             <ComboBox.OpacityMask>
                 <SolidColorBrush Color="Black" Opacity="0.5"/>
@@ -155,7 +186,7 @@
 
 
         <Button
-            Grid.Row="5"
+            Grid.Row="6"
             Grid.Column="1"
                 x:Name="Add"
                 Content="Добавить"
@@ -171,7 +202,7 @@
                 Style="{StaticResource MyButtonStyle}"
                 />
         <Button
-            Grid.Row="5"
+            Grid.Row="6"
             Grid.Column="0"
                 x:Name="Exit"
                 Content="Назад"

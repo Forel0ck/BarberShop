@@ -32,6 +32,7 @@ namespace BarberShop.EF
         public int IsDeleted { get; set; }
         public byte[] Photo { get; set; }
         public string INFO { get => "FirstName" + " " + "LastName" + " " + "Phone" + " " + "PassportNumber" + " " + "Passport_Series" + " " + "Experience"; }
+        public string FOI { get => $"{FirstName} {LastName}"; }
 
         public virtual Gender Gender { get; set; }
         public virtual Specialization Specialization { get; set; }
