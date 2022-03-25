@@ -23,6 +23,7 @@ namespace BarberShop.Windows
     public partial class ReportWindow : Window
     {
         List<Personnel> personnels = new List<Personnel>();
+
        
         public ReportWindow()
         {
@@ -65,29 +66,35 @@ namespace BarberShop.Windows
 
         public void Add_Click(object sender, RoutedEventArgs e)
         {
-
-            var FDate = FirstDate.SelectedDate.Value; 
-
-            var SDate = SecondDate.SelectedDate.Value;
-
-            var user = (AllPersonal.SelectedItem as EF.Personnel);
-
-            var listServices = context.Record.ToList().Where(i => i.IdPersonnel == user.IdPersonnel).Select(i => i.IdServices).ToList() ;
-
-            Salary salary = new Salary(List<string> listServices) ;
-
-            double summ = 0;
-
-            foreach (var item in listServices)
+            try
             {
-                summ = summ + Convert.ToDouble(context.Services.ToList().Where(i => i.IdServices == item).FirstOrDefault().Cost);
+                var FDate = FirstDate.SelectedDate.Value;
+
+                var SDate = SecondDate.SelectedDate.Value;
+
+                var user = (AllPersonal.SelectedItem as EF.Personnel);
+
+                var listServices = context.Record.ToList().Where(i => i.IdPersonnel == user.IdPersonnel).Select(i => i.IdServices).ToList();
+
+                double summ = 0;
+
+                foreach (var item in listServices)
+                {
+                    summ = summ + Convert.ToDouble(context.Services.ToList().Where(i => i.IdServices == item).FirstOrDefault().Cost);
+                }
+
+                //Salary salary = new Salary(List<string> listServices);
+
+                var res = (summ * 0.3) * 0.87;
+
+                Result.Text = res.ToString();
             }
-
-            var res = summ * 0.3 * 0.87;
-
-            Result.Text = res.ToString();
-
-
+            catch (Exception)
+            {
+                MessageBox.Show("Что-то пошло не так");
+                return;
+            }
+           
         }
     }
     
