@@ -72,7 +72,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="ClassEntities.cs" />
+    <Compile Include="Classes\ClassEntities.cs" />
+    <Compile Include="Classes\Salary.cs" />
     <Compile Include="EF\Authorization.cs">
       <DependentUpon>BD.tt</DependentUpon>
     </Compile>
@@ -121,7 +122,7 @@
     <Compile Include="EF\sysdiagrams.cs">
       <DependentUpon>BD.tt</DependentUpon>
     </Compile>
-    <Compile Include="PersonnelData.cs" />
+    <Compile Include="Classes\PersonnelData.cs" />
     <Compile Include="Windows\AddClientWindow.xaml.cs">
       <DependentUpon>AddClientWindow.xaml</DependentUpon>
     </Compile>

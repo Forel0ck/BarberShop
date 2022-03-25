@@ -26,6 +26,7 @@ namespace BarberShop.Windows
         {
             "По умолчанию","По фамилия","По имени","По телефону","По специальности"
         };
+        
         public PersonalWindow()
         {
             InitializeComponent();

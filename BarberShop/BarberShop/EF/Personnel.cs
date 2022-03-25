@@ -31,9 +31,9 @@ namespace BarberShop.EF
         public int Experience { get; set; }
         public int IsDeleted { get; set; }
         public byte[] Photo { get; set; }
-        public string INFO { get => "FirstName" + " " + "LastName" + " " + "Phone" + " " + "PassportNumber" + " " + "Passport_Series" + " " + "Experience"; }
-        public string FOI { get => $"{FirstName} {LastName}"; }
 
+        public string INFO { get => $"{FirstName}{LastName}{Phone}"; }
+    
         public virtual Gender Gender { get; set; }
         public virtual Specialization Specialization { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

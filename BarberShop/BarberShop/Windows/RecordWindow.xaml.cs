@@ -54,17 +54,25 @@ namespace BarberShop.Windows
 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
-            Record record = new Record();
+            var chekRecord = MessageBox.Show("Вы уверены","Вопрос",MessageBoxButton.YesNo,MessageBoxImage.Question);
+            if (chekRecord == MessageBoxResult.Yes)
+            {
+                Record record = new Record();
 
-            record.idClient = Client.SelectedIndex + 1;
-            record.IdPersonnel = cmbPersonel.SelectedIndex + 1;
-            record.IdServices = Service.SelectedIndex + 1;
+                record.idClient = Client.SelectedIndex + 1;
+                record.IdPersonnel = cmbPersonel.SelectedIndex + 1;
+                record.IdServices = Service.SelectedIndex + 1;
 
+                DateTime date = DateTime.Now;
+                record.RecordTime = date;
+                record.EndTime = date.AddMinutes(30);
 
+                ClassEntities.context.Record.Add(record);
+                ClassEntities.context.SaveChanges();
+                MessageBox.Show("Запись добавлена");
+            }
 
-            MessageBox.Show("Запись добавлен");
-            ClassEntities.context.Record.Add(record);
-            ClassEntities.context.SaveChanges();
+            
         }
 
     }

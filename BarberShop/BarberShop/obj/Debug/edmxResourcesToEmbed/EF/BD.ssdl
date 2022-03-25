@@ -51,8 +51,8 @@
     <Property Name="IdServices" Type="int" Nullable="false" />
     <Property Name="RecordTime" Type="datetime" Nullable="false" />
     <Property Name="EndTime" Type="datetime" Nullable="false" />
-    <Property Name="Completed" Type="bit" Nullable="false" />
-    <Property Name="IsDeleted" Type="int" Nullable="false" />
+    <Property Name="Completed" Type="bit" />
+    <Property Name="IsDeleted" Type="int" />
   </EntityType>
   <EntityType Name="Services">
     <Key>

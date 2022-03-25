@@ -261,17 +261,6 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
 
-
-            <!--<DataGrid.Columns >
-                <DataGridTextColumn Header="Имя" Width="*" Binding="{Binding FirstName}"/>
-                <DataGridTextColumn Header="Фамилия" Width="*" Binding="{Binding LastName}"/>
-                <DataGridTextColumn Header="Номер телефона" Width="*" Binding="{Binding Phone}"/>
-                <DataGridTextColumn Header="Номер паспорта" Width="*" Binding="{Binding PassportNumber}"/>
-                <DataGridTextColumn Header="Серия паспорта" Width="*" Binding="{Binding Passport_Series}"/>
-                <DataGridTextColumn Header="Пол" Width="0.5*" Binding="{Binding Gender.GenderName}"/>
-                <DataGridTextColumn Header="Спецальность" Width="*" Binding="{Binding Specialization.SpecializationName}"/>
-                <DataGridTextColumn Header="Стаж" Width="0.5*" Binding="{Binding Experience}"/>
-            </DataGrid.Columns>-->
             <ListView.Resources>
                 <Style BasedOn="{StaticResource {x:Type DataGridColumnHeader}}" TargetType="{x:Type DataGridColumnHeader}">
                     <Setter Property="Background" Value="#324AB2" />

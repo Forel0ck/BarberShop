@@ -56,8 +56,8 @@
           <Property Name="IdServices" Type="int" Nullable="false" />
           <Property Name="RecordTime" Type="datetime" Nullable="false" />
           <Property Name="EndTime" Type="datetime" Nullable="false" />
-          <Property Name="Completed" Type="bit" Nullable="false" />
-          <Property Name="IsDeleted" Type="int" Nullable="false" />
+          <Property Name="Completed" Type="bit" />
+          <Property Name="IsDeleted" Type="int" />
         </EntityType>
         <EntityType Name="Services">
           <Key>
@@ -373,8 +373,8 @@
           <Property Name="IdServices" Type="Int32" Nullable="false" />
           <Property Name="RecordTime" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="EndTime" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="Completed" Type="Boolean" Nullable="false" />
-          <Property Name="IsDeleted" Type="Int32" Nullable="false" />
+          <Property Name="Completed" Type="Boolean" />
+          <Property Name="IsDeleted" Type="Int32" />
           <NavigationProperty Name="Client" Relationship="BarberShopModel.FK_Record_Client" FromRole="Record" ToRole="Client" />
           <NavigationProperty Name="Personnel" Relationship="BarberShopModel.FK_Record_Personnel" FromRole="Record" ToRole="Personnel" />
           <NavigationProperty Name="Services" Relationship="BarberShopModel.FK_Record_Services" FromRole="Record" ToRole="Services" />

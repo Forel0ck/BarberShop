@@ -4,16 +4,16 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="f14eb11d66984123953eb61d4b9de3d4" Name="Diagram1" ZoomLevel="97">
-        <EntityTypeShape EntityType="BarberShopModel.Authorization" Width="1.5" PointX="5.75" PointY="5.75" />
-        <EntityTypeShape EntityType="BarberShopModel.Client" Width="1.5" PointX="3" PointY="5.75" />
+      <Diagram DiagramId="f14eb11d66984123953eb61d4b9de3d4" Name="Diagram1" ZoomLevel="125">
+        <EntityTypeShape EntityType="BarberShopModel.Authorization" Width="1.5" PointX="2.75" PointY="5.75" />
+        <EntityTypeShape EntityType="BarberShopModel.Client" Width="1.5" PointX="3" PointY="12.125" />
         <EntityTypeShape EntityType="BarberShopModel.Gender" Width="1.5" PointX="0.75" PointY="2.125" />
         <EntityTypeShape EntityType="BarberShopModel.Personnel" Width="1.5" PointX="3" PointY="1" />
         <EntityTypeShape EntityType="BarberShopModel.Record" Width="1.5" PointX="5.25" PointY="1.25" />
-        <EntityTypeShape EntityType="BarberShopModel.Services" Width="1.5" PointX="3" PointY="8.75" />
+        <EntityTypeShape EntityType="BarberShopModel.Services" Width="1.5" PointX="3" PointY="9" />
         <EntityTypeShape EntityType="BarberShopModel.Specialization" Width="1.5" PointX="0.75" PointY="6.125" />
-        <EntityTypeShape EntityType="BarberShopModel.Stuff" Width="1.5" PointX="0.75" PointY="8.875" />
-        <EntityTypeShape EntityType="BarberShopModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BarberShopModel.Stuff" Width="1.5" PointX="0.75" PointY="9.125" />
+        <EntityTypeShape EntityType="BarberShopModel.sysdiagrams" Width="1.5" PointX="4.75" PointY="5.75" />
         <AssociationConnector Association="BarberShopModel.FK_Record_Client" />
         <AssociationConnector Association="BarberShopModel.FK_Personnel_Gender" />
         <AssociationConnector Association="BarberShopModel.FK_Personnel_Specialization" />

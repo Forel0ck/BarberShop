@@ -20,8 +20,8 @@ namespace BarberShop.EF
         public int IdServices { get; set; }
         public System.DateTime RecordTime { get; set; }
         public System.DateTime EndTime { get; set; }
-        public bool Completed { get; set; }
-        public int IsDeleted { get; set; }
+        public Nullable<bool> Completed { get; set; }
+        public Nullable<int> IsDeleted { get; set; }
     
         public virtual Client Client { get; set; }
         public virtual Personnel Personnel { get; set; }
