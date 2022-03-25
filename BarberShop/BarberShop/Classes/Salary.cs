@@ -18,6 +18,7 @@ namespace BarberShop.Classes
             }
 
             var res = summ * 0.3 * 0.87;
+            ///===
         }
     }
 }
