@@ -73,7 +73,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Classes\ClassEntities.cs" />
-    <Compile Include="Classes\Salary.cs" />
     <Compile Include="EF\Authorization.cs">
       <DependentUpon>BD.tt</DependentUpon>
     </Compile>

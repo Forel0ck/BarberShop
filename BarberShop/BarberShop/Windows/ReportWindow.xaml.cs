@@ -1,4 +1,4 @@
-﻿using BarberShop.Classes;
+﻿
 using BarberShop.EF;
 using System;
 using System.Collections.Generic;
@@ -72,18 +72,24 @@ namespace BarberShop.Windows
 
                 var SDate = SecondDate.SelectedDate.Value;
 
+                var sv = context.Record.Where(i => i.RecordTime >= FDate && i.EndTime <= SDate).ToList(); // выборка по диапазону времени
+
                 var user = (AllPersonal.SelectedItem as EF.Personnel);
 
                 var listServices = context.Record.ToList().Where(i => i.IdPersonnel == user.IdPersonnel).Select(i => i.IdServices).ToList();
 
                 double summ = 0;
 
-                foreach (var item in listServices)
+                foreach (var item in sv)
                 {
-                    summ = summ + Convert.ToDouble(context.Services.ToList().Where(i => i.IdServices == item).FirstOrDefault().Cost);
+                    foreach (var itemlS in listServices)
+                    {
+                        summ = summ + Convert.ToDouble(context.Services.ToList().Where(i => i.IdServices == itemlS).FirstOrDefault().Cost);
+                    }
                 }
 
-                //Salary salary = new Salary(List<string> listServices);
+
+                
 
                 var res = (summ * 0.3) * 0.87;
 
