@@ -91,10 +91,19 @@
                 BorderBrush="White"  
                 />
             <DatePicker
-                x:Name="FirstDate"
+                x:Name="FirstDate" 
+                BorderBrush="{x:Null}"
+                FontSize="40"
+                VerticalAlignment="Center"
+                Margin="5"
                 />
             <DatePicker
                 x:Name="SecondDate"
+                BorderBrush="{x:Null}"
+                FontSize="40"
+                VerticalAlignment="Center"
+                Margin="5"
+                
                 />
             <TextBlock
                 Text="Вывод :"

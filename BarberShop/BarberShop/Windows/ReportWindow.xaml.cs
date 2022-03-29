@@ -3,6 +3,7 @@ using BarberShop.EF;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -23,6 +24,8 @@ namespace BarberShop.Windows
     public partial class ReportWindow : Window
     {
         List<Personnel> personnels = new List<Personnel>();
+
+
 
        
         public ReportWindow()
@@ -88,9 +91,6 @@ namespace BarberShop.Windows
                     }
                 }
 
-
-                
-
                 var res = (summ * 0.3) * 0.87;
 
                 Result.Text = res.ToString();
@@ -102,6 +102,7 @@ namespace BarberShop.Windows
             }
            
         }
+
     }
     
 }
